@@ -1,13 +1,13 @@
 //
-//  _thWorkbookUITests.swift
-//  8thWorkbookUITests
+//  FirstSilsoupUITests.swift
+//  FirstSilsoupUITests
 //
-//  Created by 이주현 on 3/22/25.
+//  Created by 이주현 on 3/23/25.
 //
 
 import XCTest
 
-final class _thWorkbookUITests: XCTestCase {
+final class FirstSilsoupUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

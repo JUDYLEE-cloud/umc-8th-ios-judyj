@@ -1,13 +1,13 @@
 //
-//  _thWorkbookUITestsLaunchTests.swift
-//  8thWorkbookUITests
+//  FirstSilsoupUITestsLaunchTests.swift
+//  FirstSilsoupUITests
 //
-//  Created by 이주현 on 3/22/25.
+//  Created by 이주현 on 3/23/25.
 //
 
 import XCTest
 
-final class _thWorkbookUITestsLaunchTests: XCTestCase {
+final class FirstSilsoupUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -7,62 +7,75 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		8B426A742D8E93E200CC4931 /* PBXContainerItemProxy */ = {
+		8B544E682D90085000BF1C5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B426A5B2D8E93E100CC4931 /* Project object */;
+			containerPortal = 8B544E4F2D90084F00BF1C5E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B426A622D8E93E100CC4931;
-			remoteInfo = 8thWorkbook;
+			remoteGlobalIDString = 8B544E562D90084F00BF1C5E;
+			remoteInfo = FirstSilsoup;
 		};
-		8B426A7E2D8E93E200CC4931 /* PBXContainerItemProxy */ = {
+		8B544E722D90085000BF1C5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B426A5B2D8E93E100CC4931 /* Project object */;
+			containerPortal = 8B544E4F2D90084F00BF1C5E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B426A622D8E93E100CC4931;
-			remoteInfo = 8thWorkbook;
+			remoteGlobalIDString = 8B544E562D90084F00BF1C5E;
+			remoteInfo = FirstSilsoup;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B426A632D8E93E100CC4931 /* 8thWorkbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 8thWorkbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B426A732D8E93E200CC4931 /* 8thWorkbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 8thWorkbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B426A7D2D8E93E200CC4931 /* 8thWorkbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 8thWorkbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B544E572D90084F00BF1C5E /* FirstSilsoup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSilsoup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B544E672D90085000BF1C5E /* FirstSilsoupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstSilsoupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B544E712D90085000BF1C5E /* FirstSilsoupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstSilsoupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B544E9A2D90090E00BF1C5E /* Exceptions for "FirstSilsoup" folder in "FirstSilsoup" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8B544E562D90084F00BF1C5E /* FirstSilsoup */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8B426A652D8E93E100CC4931 /* 8thWorkbook */ = {
+		8B544E592D90084F00BF1C5E /* FirstSilsoup */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = 8thWorkbook;
+			exceptions = (
+				8B544E9A2D90090E00BF1C5E /* Exceptions for "FirstSilsoup" folder in "FirstSilsoup" target */,
+			);
+			path = FirstSilsoup;
 			sourceTree = "<group>";
 		};
-		8B426A762D8E93E200CC4931 /* 8thWorkbookTests */ = {
+		8B544E6A2D90085000BF1C5E /* FirstSilsoupTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = 8thWorkbookTests;
+			path = FirstSilsoupTests;
 			sourceTree = "<group>";
 		};
-		8B426A802D8E93E200CC4931 /* 8thWorkbookUITests */ = {
+		8B544E742D90085000BF1C5E /* FirstSilsoupUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = 8thWorkbookUITests;
+			path = FirstSilsoupUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8B426A602D8E93E100CC4931 /* Frameworks */ = {
+		8B544E542D90084F00BF1C5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B426A702D8E93E200CC4931 /* Frameworks */ = {
+		8B544E642D90085000BF1C5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B426A7A2D8E93E200CC4931 /* Frameworks */ = {
+		8B544E6E2D90085000BF1C5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B426A5A2D8E93E100CC4931 = {
+		8B544E4E2D90084F00BF1C5E = {
 			isa = PBXGroup;
 			children = (
-				8B426A652D8E93E100CC4931 /* 8thWorkbook */,
-				8B426A762D8E93E200CC4931 /* 8thWorkbookTests */,
-				8B426A802D8E93E200CC4931 /* 8thWorkbookUITests */,
-				8B426A642D8E93E100CC4931 /* Products */,
+				8B544E592D90084F00BF1C5E /* FirstSilsoup */,
+				8B544E6A2D90085000BF1C5E /* FirstSilsoupTests */,
+				8B544E742D90085000BF1C5E /* FirstSilsoupUITests */,
+				8B544E582D90084F00BF1C5E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8B426A642D8E93E100CC4931 /* Products */ = {
+		8B544E582D90084F00BF1C5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B426A632D8E93E100CC4931 /* 8thWorkbook.app */,
-				8B426A732D8E93E200CC4931 /* 8thWorkbookTests.xctest */,
-				8B426A7D2D8E93E200CC4931 /* 8thWorkbookUITests.xctest */,
+				8B544E572D90084F00BF1C5E /* FirstSilsoup.app */,
+				8B544E672D90085000BF1C5E /* FirstSilsoupTests.xctest */,
+				8B544E712D90085000BF1C5E /* FirstSilsoupUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +108,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B426A622D8E93E100CC4931 /* 8thWorkbook */ = {
+		8B544E562D90084F00BF1C5E /* FirstSilsoup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B426A872D8E93E200CC4931 /* Build configuration list for PBXNativeTarget "8thWorkbook" */;
+			buildConfigurationList = 8B544E7B2D90085000BF1C5E /* Build configuration list for PBXNativeTarget "FirstSilsoup" */;
 			buildPhases = (
-				8B426A5F2D8E93E100CC4931 /* Sources */,
-				8B426A602D8E93E100CC4931 /* Frameworks */,
-				8B426A612D8E93E100CC4931 /* Resources */,
+				8B544E532D90084F00BF1C5E /* Sources */,
+				8B544E542D90084F00BF1C5E /* Frameworks */,
+				8B544E552D90084F00BF1C5E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8B426A652D8E93E100CC4931 /* 8thWorkbook */,
+				8B544E592D90084F00BF1C5E /* FirstSilsoup */,
 			);
-			name = 8thWorkbook;
+			name = FirstSilsoup;
 			packageProductDependencies = (
 			);
-			productName = 8thWorkbook;
-			productReference = 8B426A632D8E93E100CC4931 /* 8thWorkbook.app */;
+			productName = FirstSilsoup;
+			productReference = 8B544E572D90084F00BF1C5E /* FirstSilsoup.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B426A722D8E93E200CC4931 /* 8thWorkbookTests */ = {
+		8B544E662D90085000BF1C5E /* FirstSilsoupTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B426A8A2D8E93E200CC4931 /* Build configuration list for PBXNativeTarget "8thWorkbookTests" */;
+			buildConfigurationList = 8B544E7E2D90085000BF1C5E /* Build configuration list for PBXNativeTarget "FirstSilsoupTests" */;
 			buildPhases = (
-				8B426A6F2D8E93E200CC4931 /* Sources */,
-				8B426A702D8E93E200CC4931 /* Frameworks */,
-				8B426A712D8E93E200CC4931 /* Resources */,
+				8B544E632D90085000BF1C5E /* Sources */,
+				8B544E642D90085000BF1C5E /* Frameworks */,
+				8B544E652D90085000BF1C5E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B426A752D8E93E200CC4931 /* PBXTargetDependency */,
+				8B544E692D90085000BF1C5E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8B426A762D8E93E200CC4931 /* 8thWorkbookTests */,
+				8B544E6A2D90085000BF1C5E /* FirstSilsoupTests */,
 			);
-			name = 8thWorkbookTests;
+			name = FirstSilsoupTests;
 			packageProductDependencies = (
 			);
-			productName = 8thWorkbookTests;
-			productReference = 8B426A732D8E93E200CC4931 /* 8thWorkbookTests.xctest */;
+			productName = FirstSilsoupTests;
+			productReference = 8B544E672D90085000BF1C5E /* FirstSilsoupTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8B426A7C2D8E93E200CC4931 /* 8thWorkbookUITests */ = {
+		8B544E702D90085000BF1C5E /* FirstSilsoupUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B426A8D2D8E93E200CC4931 /* Build configuration list for PBXNativeTarget "8thWorkbookUITests" */;
+			buildConfigurationList = 8B544E812D90085000BF1C5E /* Build configuration list for PBXNativeTarget "FirstSilsoupUITests" */;
 			buildPhases = (
-				8B426A792D8E93E200CC4931 /* Sources */,
-				8B426A7A2D8E93E200CC4931 /* Frameworks */,
-				8B426A7B2D8E93E200CC4931 /* Resources */,
+				8B544E6D2D90085000BF1C5E /* Sources */,
+				8B544E6E2D90085000BF1C5E /* Frameworks */,
+				8B544E6F2D90085000BF1C5E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B426A7F2D8E93E200CC4931 /* PBXTargetDependency */,
+				8B544E732D90085000BF1C5E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8B426A802D8E93E200CC4931 /* 8thWorkbookUITests */,
+				8B544E742D90085000BF1C5E /* FirstSilsoupUITests */,
 			);
-			name = 8thWorkbookUITests;
+			name = FirstSilsoupUITests;
 			packageProductDependencies = (
 			);
-			productName = 8thWorkbookUITests;
-			productReference = 8B426A7D2D8E93E200CC4931 /* 8thWorkbookUITests.xctest */;
+			productName = FirstSilsoupUITests;
+			productReference = 8B544E712D90085000BF1C5E /* FirstSilsoupUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8B426A5B2D8E93E100CC4931 /* Project object */ = {
+		8B544E4F2D90084F00BF1C5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					8B426A622D8E93E100CC4931 = {
+					8B544E562D90084F00BF1C5E = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					8B426A722D8E93E200CC4931 = {
+					8B544E662D90085000BF1C5E = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 8B426A622D8E93E100CC4931;
+						TestTargetID = 8B544E562D90084F00BF1C5E;
 					};
-					8B426A7C2D8E93E200CC4931 = {
+					8B544E702D90085000BF1C5E = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 8B426A622D8E93E100CC4931;
+						TestTargetID = 8B544E562D90084F00BF1C5E;
 					};
 				};
 			};
-			buildConfigurationList = 8B426A5E2D8E93E100CC4931 /* Build configuration list for PBXProject "8thWorkbook" */;
+			buildConfigurationList = 8B544E522D90084F00BF1C5E /* Build configuration list for PBXProject "FirstSilsoup" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 8B426A5A2D8E93E100CC4931;
+			mainGroup = 8B544E4E2D90084F00BF1C5E;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 8B426A642D8E93E100CC4931 /* Products */;
+			productRefGroup = 8B544E582D90084F00BF1C5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B426A622D8E93E100CC4931 /* 8thWorkbook */,
-				8B426A722D8E93E200CC4931 /* 8thWorkbookTests */,
-				8B426A7C2D8E93E200CC4931 /* 8thWorkbookUITests */,
+				8B544E562D90084F00BF1C5E /* FirstSilsoup */,
+				8B544E662D90085000BF1C5E /* FirstSilsoupTests */,
+				8B544E702D90085000BF1C5E /* FirstSilsoupUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8B426A612D8E93E100CC4931 /* Resources */ = {
+		8B544E552D90084F00BF1C5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B426A712D8E93E200CC4931 /* Resources */ = {
+		8B544E652D90085000BF1C5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B426A7B2D8E93E200CC4931 /* Resources */ = {
+		8B544E6F2D90085000BF1C5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +245,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8B426A5F2D8E93E100CC4931 /* Sources */ = {
+		8B544E532D90084F00BF1C5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B426A6F2D8E93E200CC4931 /* Sources */ = {
+		8B544E632D90085000BF1C5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B426A792D8E93E200CC4931 /* Sources */ = {
+		8B544E6D2D90085000BF1C5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +269,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8B426A752D8E93E200CC4931 /* PBXTargetDependency */ = {
+		8B544E692D90085000BF1C5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B426A622D8E93E100CC4931 /* 8thWorkbook */;
-			targetProxy = 8B426A742D8E93E200CC4931 /* PBXContainerItemProxy */;
+			target = 8B544E562D90084F00BF1C5E /* FirstSilsoup */;
+			targetProxy = 8B544E682D90085000BF1C5E /* PBXContainerItemProxy */;
 		};
-		8B426A7F2D8E93E200CC4931 /* PBXTargetDependency */ = {
+		8B544E732D90085000BF1C5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B426A622D8E93E100CC4931 /* 8thWorkbook */;
-			targetProxy = 8B426A7E2D8E93E200CC4931 /* PBXContainerItemProxy */;
+			target = 8B544E562D90084F00BF1C5E /* FirstSilsoup */;
+			targetProxy = 8B544E722D90085000BF1C5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		8B426A852D8E93E200CC4931 /* Debug */ = {
+		8B544E792D90085000BF1C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +345,7 @@
 			};
 			name = Debug;
 		};
-		8B426A862D8E93E200CC4931 /* Release */ = {
+		8B544E7A2D90085000BF1C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,16 +401,17 @@
 			};
 			name = Release;
 		};
-		8B426A882D8E93E200CC4931 /* Debug */ = {
+		8B544E7C2D90085000BF1C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"8thWorkbook/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FirstSilsoup/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirstSilsoup/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkbook";
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FirstSilsoup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -416,16 +430,17 @@
 			};
 			name = Debug;
 		};
-		8B426A892D8E93E200CC4931 /* Release */ = {
+		8B544E7D2D90085000BF1C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"8thWorkbook/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FirstSilsoup/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirstSilsoup/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkbook";
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FirstSilsoup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -444,7 +459,7 @@
 			};
 			name = Release;
 		};
-		8B426A8B2D8E93E200CC4931 /* Debug */ = {
+		8B544E7F2D90085000BF1C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -453,16 +468,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkbookTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FirstSilsoupTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/8thWorkbook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/8thWorkbook";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstSilsoup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FirstSilsoup";
 			};
 			name = Debug;
 		};
-		8B426A8C2D8E93E200CC4931 /* Release */ = {
+		8B544E802D90085000BF1C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,87 +486,87 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkbookTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FirstSilsoupTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/8thWorkbook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/8thWorkbook";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstSilsoup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FirstSilsoup";
 			};
 			name = Release;
 		};
-		8B426A8E2D8E93E200CC4931 /* Debug */ = {
+		8B544E822D90085000BF1C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkbookUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FirstSilsoupUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = 8thWorkbook;
+				TEST_TARGET_NAME = FirstSilsoup;
 			};
 			name = Debug;
 		};
-		8B426A8F2D8E93E200CC4931 /* Release */ = {
+		8B544E832D90085000BF1C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkbookUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FirstSilsoupUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = 8thWorkbook;
+				TEST_TARGET_NAME = FirstSilsoup;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B426A5E2D8E93E100CC4931 /* Build configuration list for PBXProject "8thWorkbook" */ = {
+		8B544E522D90084F00BF1C5E /* Build configuration list for PBXProject "FirstSilsoup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B426A852D8E93E200CC4931 /* Debug */,
-				8B426A862D8E93E200CC4931 /* Release */,
+				8B544E792D90085000BF1C5E /* Debug */,
+				8B544E7A2D90085000BF1C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B426A872D8E93E200CC4931 /* Build configuration list for PBXNativeTarget "8thWorkbook" */ = {
+		8B544E7B2D90085000BF1C5E /* Build configuration list for PBXNativeTarget "FirstSilsoup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B426A882D8E93E200CC4931 /* Debug */,
-				8B426A892D8E93E200CC4931 /* Release */,
+				8B544E7C2D90085000BF1C5E /* Debug */,
+				8B544E7D2D90085000BF1C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B426A8A2D8E93E200CC4931 /* Build configuration list for PBXNativeTarget "8thWorkbookTests" */ = {
+		8B544E7E2D90085000BF1C5E /* Build configuration list for PBXNativeTarget "FirstSilsoupTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B426A8B2D8E93E200CC4931 /* Debug */,
-				8B426A8C2D8E93E200CC4931 /* Release */,
+				8B544E7F2D90085000BF1C5E /* Debug */,
+				8B544E802D90085000BF1C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B426A8D2D8E93E200CC4931 /* Build configuration list for PBXNativeTarget "8thWorkbookUITests" */ = {
+		8B544E812D90085000BF1C5E /* Build configuration list for PBXNativeTarget "FirstSilsoupUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B426A8E2D8E93E200CC4931 /* Debug */,
-				8B426A8F2D8E93E200CC4931 /* Release */,
+				8B544E822D90085000BF1C5E /* Debug */,
+				8B544E832D90085000BF1C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8B426A5B2D8E93E100CC4931 /* Project object */;
+	rootObject = 8B544E4F2D90084F00BF1C5E /* Project object */;
 }
