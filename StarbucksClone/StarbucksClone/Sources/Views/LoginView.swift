@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LoginViewSecond: View {
+struct LoginView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: geometry.size.height * 0.1) {
@@ -106,17 +106,18 @@ private struct SocialLoginButton: View {
     }
 }
 
-//extension Color {
-//    init(hex: Int) {
-//        self.init(
-//            .sRGB,
-//            red: Double((hex >> 16) & 0xFF) / 255,
-//            green: Double((hex >> 8) & 0xFF) / 255,
-//            blue: Double((hex >> 0) & 0xFF) / 255
-//        )
-//    }
-//}
+extension Color {
+    init(hex: Int) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xFF) / 255,
+            green: Double((hex >> 8) & 0xFF) / 255,
+            blue: Double((hex >> 0) & 0xFF) / 255
+        )
+    }
+}
 
 #Preview {
-    LoginViewSecond()
+    LoginView()
 }
+
