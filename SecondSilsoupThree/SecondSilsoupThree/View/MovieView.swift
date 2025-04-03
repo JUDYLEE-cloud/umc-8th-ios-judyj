@@ -2,7 +2,7 @@ import SwiftUI
 
 struct MovieView: View {
     var viewModel: MovieViewModel = .init()
-    @AppStorage("saveMovieTitle") var savemovietitle: String = ""
+    @AppStorage("saveMovieTitle") var savemovietitle: String = "미키17"
     
     var body: some View {
         VStack(spacing: 56) {
