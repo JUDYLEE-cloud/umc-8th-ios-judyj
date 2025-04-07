@@ -11,7 +11,7 @@ struct CustomTabView: View {
     
     var body: some View {
             TabView(selection: $selectedTab) {
-                Text("First Content")
+                HomeView()
                     .tabItem {
                         Label{
                             Text("Home")

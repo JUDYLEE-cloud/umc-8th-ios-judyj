@@ -5,10 +5,7 @@ import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var loginModel: LoginModel = LoginModel(id: "", password: "")
-    
-    
 }
-
 
 class SignupViewModel: ObservableObject {
     @Published var signupModel: SignupModel = SignupModel(nickname: "", id: "", password: "", passwordConfirm: "")

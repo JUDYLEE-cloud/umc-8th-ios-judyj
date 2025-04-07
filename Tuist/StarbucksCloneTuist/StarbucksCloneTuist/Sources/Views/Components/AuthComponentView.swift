@@ -71,11 +71,14 @@ struct CustomTextField: View {
 
 struct GreenButton: View {
     let title: String
+    var isDisabled: Bool = false
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color("green01"))
                 .frame(maxWidth: .infinity, maxHeight: 46)
+                .opacity(isDisabled ? 0.3 : 1.0)
             
             Text(title)
                 .font(.mainTextMedium16())
