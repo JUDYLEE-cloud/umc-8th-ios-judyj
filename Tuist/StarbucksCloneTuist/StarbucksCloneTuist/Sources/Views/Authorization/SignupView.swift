@@ -23,7 +23,7 @@ struct SignupView: View {
                 CustomTextField(title: "비밀번호 확인",
                                 viewmodeltext: $viewModel.signupModel.passwordConfirm,
                                 isMatching: viewModel.signupModel.isPasswordMatching)
-                .onChange(of: viewModel.signupModel.isPasswordMatching) { newValue in
+                .onChange(of: viewModel.signupModel.isPasswordMatching) {
                     viewModel.objectWillChange.send()
                 }
                 

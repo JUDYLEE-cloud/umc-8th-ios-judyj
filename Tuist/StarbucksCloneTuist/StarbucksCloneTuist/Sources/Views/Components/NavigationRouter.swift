@@ -1,10 +1,3 @@
-//
-//  NavigationRouter.swift
-//  StarbucksCloneTuist
-//
-//  Created by 이주현 on 4/7/25.
-//
-
 import Foundation
 import SwiftUI
 import Observation

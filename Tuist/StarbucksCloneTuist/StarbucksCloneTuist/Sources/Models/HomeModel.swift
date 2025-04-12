@@ -1,12 +1,9 @@
-//
-//  HomeModel.swift
-//  StarbucksCloneTuist
-//
-//  Created by 이주현 on 4/7/25.
-//
-
 import Foundation
 
+// 단일 책임 원칙 - 이렇게 하면 안됨! 홈뷰에서는 모든 내용이 필요 없으니까 홉뷰, 디테일 뷰 모델을 따로 만들어야 함
+// 그 두개는 맵핑이 크게 연결해주며, id로 세부적인 뷰를 연결 (이건 서버가 따로 있을 때의 얘기, 그래서 프론트 작업 전에 서버의 데이터베이스를 먼저 봐야함)
+// id도 서버로부터 갖고 온 Id를 그대로 쓰면 안되고 uuid를 써야함. 왜냐면 디테일 뷰에서 뒤로가기 눌러도 id는 1초 정도 남아있기 때문에 그 사이에 다른 뷰 누르면 전 id가 실행됨
+// uuid는 로컬임. uuid를 쓴 후 -> 서버로부터 갖고 온 id를 불러오는 식인거임. (uuid + 서버 id 같이 쓰는 것)
 struct ScrollMenuItem: Identifiable {
     let id: Int
     let imageName: String
@@ -18,35 +15,17 @@ struct ScrollMenuItem: Identifiable {
     let isHotAvailable: Bool?
     let isIcedAvailable: Bool?
 }
-extension ScrollMenuItem {
-    static let drinkMenuImages: [ScrollMenuItem] = [
-        ScrollMenuItem(id: 101, imageName: "menu1", imageDetailName: "menu1detail", menuName: "에스프레소 콘파나", englishName: "Espresso Con Panna", price: 4100, menudescription: "향긋한 바닐라 시럽과 시원한 우유에 어름을 넣고 점을 찍듯이 에스프레소를 부은 후 벌집 모양으로 카라멜 드리즐을 올린 달콤한 커피 음료", isHotAvailable: true, isIcedAvailable: false),
-        ScrollMenuItem(id: 102, imageName: "menu2", imageDetailName: "menu2detail", menuName: "에스프레소 마키아또", englishName: "Espresso Macchiato", price: 3900, menudescription: "신선한 에스프레소 샷에 우유 거품을 살짝 얹은 커피 음료로서, 강렬한 에스프레소의 맛과 우유의 부드러움을 같이 즐길 수 있는 커피 음료", isHotAvailable: false, isIcedAvailable: true),
-        ScrollMenuItem(id: 103, imageName: "menu3", imageDetailName: "menu3detail", menuName: "아이스 카페 아메리카노", englishName: "Iced Caffe Americano", price: 4700, menudescription: "진한 에스프레소에 시원한 정수물과 얼음을 더하여 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피", isHotAvailable: true, isIcedAvailable: true),
-        ScrollMenuItem(id: 104, imageName: "menu4", imageDetailName: "menu4detail", menuName: "카페 아메리카노", englishName: "Caffe Americano", price: 4700, menudescription: "진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피", isHotAvailable: true, isIcedAvailable: true),
-        ScrollMenuItem(id: 105, imageName: "menu5", imageDetailName: "menu5detail", menuName: "아이스 카라멜 마끼아또", englishName: "Iced Caramel Macchiato", price: 6100, menudescription: "향긋한 바닐라 시럽과 시원한 우유에 어름을 넣고 점을 찍듯이 에스프레소를 부은 후 벌집 모양으로 카라멜 드리즐을 올린 달콤한 커피 음료", isHotAvailable: true, isIcedAvailable: true),
-        ScrollMenuItem(id: 106, imageName: "menu6", imageDetailName: "menu6detail", menuName: "카라멜 마끼아또", englishName: "Caramel Macchiato", price: 6100, menudescription: "향긋한 바닐라 시럽과 시원한 우유에 어름을 넣고 점을 찍듯이 에스프레소를 부은 후 벌집 모양으로 카라멜 드리즐을 올린 달콤한 커피 음료", isHotAvailable: true, isIcedAvailable: true),
-    ]
-    static let dessertMenuImages: [ScrollMenuItem] = [
-        ScrollMenuItem(id: 1, imageName: "dessert1", imageDetailName: nil, menuName: "너티 크루아상", englishName: nil, price: nil, menudescription: nil, isHotAvailable: nil, isIcedAvailable: nil),
-        ScrollMenuItem(id: 2, imageName: "dessert2", imageDetailName: nil, menuName: "매콤 소시지 불고기", englishName: nil, price: nil, menudescription: nil, isHotAvailable: nil, isIcedAvailable: nil),
-        ScrollMenuItem(id: 3, imageName: "dessert3", imageDetailName: nil, menuName: "미니 리프 파이", englishName: nil, price: nil, menudescription: nil, isHotAvailable: nil, isIcedAvailable: nil),
-        ScrollMenuItem(id: 4, imageName: "dessert4", imageDetailName: nil, menuName: "뺑 오 쇼콜라", englishName: nil, price: nil, menudescription: nil, isHotAvailable: nil, isIcedAvailable: nil),
-        ScrollMenuItem(id: 5, imageName: "dessert5", imageDetailName: nil, menuName: "소시지&올리브 파이", englishName: nil, price: nil, menudescription: nil, isHotAvailable: nil, isIcedAvailable: nil)
-    ]
+
+struct ScrollDessertMenuItem: Identifiable {
+    let id: Int
+    let imageName: String
+    let menuName: String
 }
 
-                       
-                       
+
 struct EventItem: Identifiable {
     let id: UUID = UUID()
     let imageName: String
     let eventName: String
     let eventDescription: String
 }
-extension EventItem {
-    static let sampleEventItems: [EventItem] = [
-        EventItem(imageName: "event1", eventName: "25년 3월 일회용컵 없는 날 캠페인", eventDescription: "매월 10일은 일회용컵 없는 날! 스타벅스 에모매장에서 개인컵 및 다회용 컵을 이용하세요."),
-        EventItem(imageName: "event2", eventName: "스타벅스 ooo점을 찾습니다", eventDescription: "스타벅스 커뮤니티 스토어 파트너를 웅영할 기관을 공모합니다."),
-        EventItem(imageName: "event3", eventName: "2월 8일, 리저브 스프링 신규 커피 대공개", eventDescription: "산뜻하고 달콤한 풍미가 가득한 리저브를 맛보세요.")]
-        }

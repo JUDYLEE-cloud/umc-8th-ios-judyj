@@ -3,7 +3,8 @@ import Observation
 
 struct LoginView: View {
     @State var router = NavigationRouter()
-    
+    @StateObject private var viewModel = LoginViewModel()
+   
     var body: some View {
         NavigationStack(path: $router.path) {
             VStack {
@@ -51,13 +52,12 @@ struct LoginView: View {
             .frame(height: 219, alignment: .topLeading)
         }
         
-        @StateObject var viewModel = LoginViewModel()
         private var LoginTextField: some View {
             VStack {
-                CustomTextField(title: "아이디", viewmodeltext: $viewModel.loginModel.id)
-                CustomTextField(title: "비밀번호", viewmodeltext: $viewModel.loginModel.password)
+                CustomTextField(title: "아이디", viewmodeltext: $viewModel.inputID)
+                CustomTextField(title: "비밀번호", viewmodeltext: $viewModel.inputPassword)
                 Button {
-                    viewModel.loginModel.login()
+                    viewModel.login()
                 } label: {
                     GreenButton(title: "로그인하기")
                 }

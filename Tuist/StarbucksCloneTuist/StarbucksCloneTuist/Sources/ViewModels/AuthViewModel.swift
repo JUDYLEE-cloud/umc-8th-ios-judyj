@@ -1,10 +1,28 @@
-// 2주차에서 사용
-
 import Foundation
 import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var loginModel: LoginModel = LoginModel(id: "", password: "")
+    
+//    @AppStorage("loginID") var loginID: String = ""
+//    @AppStorage("loginPassword") var loginPassword: String = ""
+    @Published var inputID: String = ""
+    @Published var inputPassword: String = ""
+    @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
+    @Published var loginFailed: Bool = false
+    
+    //  회원가입뷰에서 입력한 사용자 값 불러오기
+    @AppStorage("userid") var storedId: String = ""
+    @AppStorage("userpassword") var storedPassword: String = ""
+    
+    func login() {
+        if inputID == storedId && inputPassword == storedPassword {
+            isLoggedIn = true
+        } else {
+            isLoggedIn = false
+        }
+    }
+    
 }
 
 class SignupViewModel: ObservableObject {

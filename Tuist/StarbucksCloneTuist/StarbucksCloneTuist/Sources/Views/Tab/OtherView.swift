@@ -5,24 +5,27 @@ struct OtherView: View {
     // 사인업 뷰 모델로 불러오기
     
     var body: some View {
-        VStack {
-                UpperBar
-            ZStack {
-                // Color(hex: 0xF8F8F8).ignoresSafeArea()
-                Color("white01").ignoresSafeArea()
-                VStack {
-                    User
-                    Spacer()
-                    Pay
-                    Divider()
-                    Spacer()
-                    CustomerHelp
+            VStack {
+                    UpperBar
+                ScrollView {
+                    ZStack {
+                        // Color(hex: 0xF8F8F8).ignoresSafeArea()
+                        Color("white01").ignoresSafeArea()
+                        VStack {
+                            User
+                            Spacer()
+                            Pay
+                            Divider()
+                            Spacer()
+                            CustomerHelp
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 30)
+                        .frame(height: 683)
+                    }
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 10)
-                .frame(height: 683)
-            }
-            }
+                }
     }
     
     
@@ -42,8 +45,8 @@ struct OtherView: View {
                         .font(.mainTextSemiBold24())
                 }
             }
-            .frame(height: 36)
-            .padding(.vertical, 16)
+            .frame(height: 30)
+            .padding(.vertical, 13)
             .padding(.horizontal, 23.5)
             .background(Color.white)
     }
@@ -53,11 +56,10 @@ struct OtherView: View {
              Text("\(Text(storedNickname).foregroundColor(Color("green01"))) 님\n환영합니다! 🙌🏻")
                 .font(.mainTextSemiBold24())
                 .multilineTextAlignment(.center)
-                .lineSpacing(8)
+                .lineSpacing(10)
                 .padding(.bottom, 24)
             
-//            Spacer()
-//                .frame(width: 24)
+            // Spacer()
             
             HStack(spacing: 10.5) {
                 WhiteBoxButton(image: "star", title: "별 히스토리")
@@ -123,7 +125,7 @@ struct OtherView: View {
                     .font(.mainTextSemiBold18())
                 Spacer()
             }
-            .padding(.bottom, 24)
+            .padding(.bottom, 13)
             
             HStack {
                 PayItem(imageName: "OtherIcon1", title: "스타벅스 카드 등록")
@@ -149,6 +151,7 @@ struct OtherView: View {
                 Text("고객 지원")
                     .font(.mainTextSemiBold18())
                     .padding(.bottom, 8) // padding 원래 16인데 너무 길어서 줄임
+                
                 Spacer()
             }
            HStack {

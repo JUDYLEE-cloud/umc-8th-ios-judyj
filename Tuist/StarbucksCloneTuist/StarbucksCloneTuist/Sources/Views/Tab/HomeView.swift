@@ -7,16 +7,21 @@ struct HomeView: View {
     let banner2Names = ["Banner6", "Banner7", "Banner8"]
     
     var body: some View {
+        // 최상위뷰만 navigationstack을 가지고 있어야 한다
         NavigationView {
             ScrollView {
+                // 전체에 lazyvstack 줘도 좋을 듯?
                 VStack(alignment: .leading, spacing: 20) {
                     // 1 골든 미모사 토끼
+                    // 이미지 .offset 이용해서 글자를 조금 내려야 함
+                    // zstack은 최상위 뷰에 맞추기 때문에 frame으로 이미지보다 큰 숫자 줘도 소용없음 (이라고 하는데 난 왜 되지..?)
                     ZStack(alignment: .topLeading) {
                         Image("top_img")
                             .resizable()
                             .scaledToFit()
                             .frame(maxWidth: .infinity)
                             .frame(height: 226)
+                            // .border(Color.red, width: 1)
                         
                         VStack {
                             Spacer()
@@ -83,7 +88,7 @@ struct HomeView: View {
                             
                         }
                     }
-                    .frame(height: 270)
+                    .frame(height: 270) // 1 골든 미모사
                     
                     // 2 곰돌이
                     Image("Banner2")
@@ -118,6 +123,7 @@ struct HomeView: View {
                         .frame(height: 199)
                     
                     // 6. 이벤트 스크롤
+                    // 컴포넌트화 하기 - 여기에 frame 주면 안됨. max만 줄 수 있음
                     VStack(alignment: .leading) {
                         Text("What's New")
                             .font(.mainTextSemiBold24())
@@ -178,9 +184,6 @@ struct HomeView: View {
         }
         .navigationBarHidden(true)
     }
-                
-                
-                
             } // 최상단 vstack
 
 #Preview {
