@@ -13,6 +13,7 @@ struct SignupView: View {
             CustomNavigationBar(title: "가입하기") {
                 dismiss()
             }
+            .ignoresSafeArea()
             
             VStack{
                 CustomTextField(title: "닉네임", viewmodeltext: $viewModel.signupModel.nickname)

@@ -5,8 +5,9 @@ struct OtherView: View {
     // 사인업 뷰 모델로 불러오기
     
     var body: some View {
+        NavigationStack {
             VStack {
-                    UpperBar
+                UpperBar
                 ScrollView {
                     ZStack {
                         // Color(hex: 0xF8F8F8).ignoresSafeArea()
@@ -26,12 +27,16 @@ struct OtherView: View {
                     }
                 }
                 }
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+            
     }
     
     
     private var UpperBar: some View {
             HStack {
-                // text와 button 같이 묶기
+                // labeledcontent: text와 button 같이 묶기
                 LabeledContent {
                     Button {
                         print("로그아웃")
@@ -53,7 +58,7 @@ struct OtherView: View {
     
     private var User: some View {
         VStack {
-             Text("\(Text(storedNickname).foregroundColor(Color("green01"))) 님\n환영합니다! 🙌🏻")
+             Text("\(Text(storedNickname.isEmpty ? "(작성한 닉네임)" : storedNickname).foregroundColor(Color("green01"))) 님\n환영합니다! 🙌🏻")
                 .font(.mainTextSemiBold24())
                 .multilineTextAlignment(.center)
                 .lineSpacing(10)
@@ -63,7 +68,11 @@ struct OtherView: View {
             
             HStack(spacing: 10.5) {
                 WhiteBoxButton(image: "star", title: "별 히스토리")
-                WhiteBoxButton(image: "receipt", title: "전자영수증")
+                
+                    // WhiteBoxButton(image: "receipt", title: "전자영수증")
+                NavigationLink(destination: ReceiptView(viewModel: ReceiptsViewModel())) {
+                    WhiteBoxButton(image: "receipt", title: "전자영수증")
+                }
                 WhiteBoxButton(image: "mymenu", title: "나만의 메뉴")
             }
         }
@@ -77,9 +86,6 @@ struct OtherView: View {
             self.title = title
         }
         var body: some View {
-            Button {
-                print("\(title) 클릭됨")
-            } label: {
                         VStack {
                             Image(image)
                                 .frame(width: 48, height: 48)
@@ -94,7 +100,6 @@ struct OtherView: View {
                             .shadow(color: Color.black.opacity(0.1), radius: 5, x:0, y:0)
                         )
                 }
-        }
     }
     
     private struct PayItem: View {

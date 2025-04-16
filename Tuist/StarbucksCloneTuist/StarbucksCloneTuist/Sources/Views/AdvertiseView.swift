@@ -1,18 +1,20 @@
 import SwiftUI
 
 struct AdvertiseView: View {
+    @Binding var isActivate: Bool
+    
     var body: some View {
-        VStack {
-            Image("advertise")
-                .frame(height: 720)
-                .ignoresSafeArea(edges: .top)
-            
-            Spacer()
-            
-            UnderButtonGroup
+            VStack {
+                Image("advertise")
+                    .frame(height: 720)
+                    .ignoresSafeArea(edges: .top)
+                
+                Spacer()
+                
+                UnderButtonGroup
         }
     }
-    
+
     @Environment(\.dismiss) var dismiss
     var UnderButtonGroup: some View {
         VStack {
@@ -42,6 +44,6 @@ struct AdvertiseView: View {
     }
 }
 
-#Preview {
-    AdvertiseView()
-}
+//#Preview {
+//    AdvertiseView()
+//}

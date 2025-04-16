@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct StarbucksCloneTuistApp: App {
@@ -7,13 +8,20 @@ struct StarbucksCloneTuistApp: App {
     init() {
         StarbucksCloneTuistFontFamily.registerAllCustomFonts()
     }
+    
     var body: some Scene {
         WindowGroup {
-            if isLoggedIn {
-                CustomTabView()
-            } else {
-                LoginView()
-            }
+                        if isLoggedIn {
+                            CustomTabView()
+                        } else {
+                            LoginView()
+                        }
+                    }
+        .modelContainer(for: ReceiptsModel.self)
+            
+//                    WindowGroup {
+//                        ReceiptView(viewModel: ReceiptsViewModel())
+//                    }
+                    //.modelContainer(for: ReceiptsModel.self)
         }
     }
-}

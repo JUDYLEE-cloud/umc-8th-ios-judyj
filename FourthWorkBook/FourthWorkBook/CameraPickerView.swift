@@ -34,10 +34,10 @@ struct CameraPickerView: View {
                 ScrollView {
                     Text(viewModel.recognizedText)
                         .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
                         .background(Color(.secondarySystemBackground))
                 }
                 .frame(height: 200)
+                        .frame(maxWidth: .infinity, alignment: .leading)
             } else {
                 Text("추출 결과 값 없음")
             }

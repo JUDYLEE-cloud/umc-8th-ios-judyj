@@ -6,21 +6,32 @@ struct CustomNavigationBar: View {
     
     var body: some View {
         ZStack {
-            Text(title)
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .font(.mainTextMedium16())
+            Color.white
             
-            HStack {
-                Button(action: backAction) {
-                    Image(systemName: "chevron.left")
+            VStack {
+                Spacer()
+                
+                ZStack {
+                    Text(title)
                         .foregroundColor(.black)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .font(.mainTextMedium16())
+                
+                    HStack {
+                        Button(action: backAction) {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor(.black)
+                        }
+                        Spacer()
+                    }
+                    .padding(.leading, 19)
                 }
                 Spacer()
+                    .frame(height: 22)
             }
-            .padding(.leading, 19)
         }
         .ignoresSafeArea()
+        .frame(height: 100)
         .padding(.top, 10)
     }
 }

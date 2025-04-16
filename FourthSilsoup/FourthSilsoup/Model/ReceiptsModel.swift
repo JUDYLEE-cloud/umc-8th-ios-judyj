@@ -1,10 +1,3 @@
-//
-//  ReceiptsModel.swift
-//  FourthSilsoup
-//
-//  Created by 이주현 on 4/12/25.
-//
-
 import Foundation
 import SwiftData
 

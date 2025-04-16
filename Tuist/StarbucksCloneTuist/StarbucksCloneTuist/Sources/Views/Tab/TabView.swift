@@ -1,15 +1,17 @@
 import SwiftUI
 
 // 레이블 사이 간격 주는 법?
-
 struct CustomTabView: View {
     @State private var selectedTab = 0
+    @State private var showAdForShop = false
+    // @State private var hasSeenAd = false
     
     init() {
             UITabBar.appearance().backgroundColor = UIColor.white
         }
     
     var body: some View {
+        ZStack {
             TabView(selection: $selectedTab) {
                 HomeView()
                     .tabItem {
@@ -42,7 +44,10 @@ struct CustomTabView: View {
                     }
                     .tag(2)
 
-                Text("Fourth Content")
+                ShopView()
+                    .fullScreenCover(isPresented: $showAdForShop) {
+                        AdvertiseView(isActivate: $showAdForShop)
+                    }
                     .tabItem {
                         Label{
                             Text("Shop")
@@ -53,6 +58,7 @@ struct CustomTabView: View {
                     .tag(3)
 
                 OtherView()
+                    .zIndex(1)
                     .tabItem {
                         Label{
                             Text("Other")
@@ -65,11 +71,27 @@ struct CustomTabView: View {
             .background(Color.white.ignoresSafeArea())
             .tabViewStyle(DefaultTabViewStyle())
             .tint(Color("green01"))
+            .zIndex(0)
+            .onChange(of: selectedTab) {
+                if selectedTab == 3 {
+                    showAdForShop = true
+                }
+            }
+        }
     }
 }
 
 struct CustomTabView_Previews: PreviewProvider {
+    static var devices = ["iPhone 11", "iPhone 16 Pro Max"]
     static var previews: some View {
-        CustomTabView()
+        ForEach(devices, id: \.self) { device in
+            CustomTabView()
+                .previewDevice(PreviewDevice(rawValue: device))
+                .previewDisplayName(device)
+        }
     }
 }
+ 
+//#Preview {
+//    CustomTabView()
+//}

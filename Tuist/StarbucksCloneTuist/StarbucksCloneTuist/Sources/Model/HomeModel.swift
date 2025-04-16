@@ -22,10 +22,22 @@ struct ScrollDessertMenuItem: Identifiable {
     let menuName: String
 }
 
-
-struct EventItem: Identifiable {
+struct HomeEventItem: Identifiable {
     let id: UUID = UUID()
     let imageName: String
     let eventName: String
     let eventDescription: String
+}
+
+struct HomeScrollMenuItem: Identifiable {
+    let id: UUID = UUID()
+    let imageName: String
+    let menuName: String
+}
+
+struct HomeScrollBestItem: Identifiable {
+    let id: UUID = UUID()
+    let imageName: String
+    let menuName: String
+    let volume: Int?
 }

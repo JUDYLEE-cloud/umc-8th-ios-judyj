@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     @AppStorage("usernickname") private var storedNickname: String = ""
-    let eventImages: [EventItem] = EventItem.sampleEventItems
+    let eventImages: [HomeEventItem] = HomeEventItem.sampleEventItems
     let banner1Names = ["Banner3", "Banner4", "Banner5"]
     let banner2Names = ["Banner6", "Banner7", "Banner8"]
     
@@ -21,7 +21,7 @@ struct HomeView: View {
                             .scaledToFit()
                             .frame(maxWidth: .infinity)
                             .frame(height: 226)
-                            // .border(Color.red, width: 1)
+                        // .border(Color.red, width: 1)
                         
                         VStack {
                             Spacer()
@@ -98,15 +98,17 @@ struct HomeView: View {
                         .frame(height: 183)
                     
                     // 3 메뉴 스크롤
-                    HorizontalMenuSectionView(
-                        title: (
-                            Text(storedNickname.isEmpty ? "설정 닉네임" : storedNickname)
-                                .foregroundColor(Color("brown01")) +
-                            Text("님을 위한 추천 메뉴")
-                                .foregroundColor(.black)
-                        ),
-                        menuItems: ScrollMenuItem.drinkMenuImages
-                    )
+                    VStack {
+                        (Text(storedNickname.isEmpty ? "설정 닉네임" : storedNickname)
+                            .foregroundColor(Color("brown01")) +
+                         Text("님을 위한 추천 메뉴"))
+                        .foregroundColor(.black)
+                        .font(.mainTextBold24())
+                        .padding(.horizontal, 16)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        HorizontalMenuSectionView(menuItems: ScrollMenuItem.drinkMenuImages)
+                    }
                     
                     // 4. blooming event 이미지
                     Image("eventBanner")
@@ -131,17 +133,17 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 16) {
-                                ForEach(eventImages) { scrollEventItem in
+                                ForEach(eventImages) { scrollHomeEventItem in
                                     VStack(alignment: .leading) {
-                                        Image(scrollEventItem.imageName)
+                                        Image(scrollHomeEventItem.imageName)
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width: 242, height: 160)
                                             .padding(.bottom, 6)
-                                        Text(scrollEventItem.eventName)
+                                        Text(scrollHomeEventItem.eventName)
                                             .font(.mainTextSemiBold18())
                                             .padding(.bottom, 1)
-                                        Text(scrollEventItem.eventDescription)
+                                        Text(scrollHomeEventItem.eventDescription)
                                             .font(.mainTextRegular13())
                                             .foregroundColor(Color("gray03"))
                                             .lineLimit(2)
@@ -165,7 +167,14 @@ struct HomeView: View {
                     }
                     
                     // 8. 디저트 메뉴 스크롤
-                    HorizontalMenuSectionView(title: Text("하루가 달콤해지는 디저트"), menuItems: ScrollMenuItem.dessertMenuImages)
+                    VStack {
+                        Text("하루가 달콤해지는 디저트")
+                            .font(.mainTextBold24())
+                            .padding(.horizontal, 16)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        HorizontalMenuSectionView(menuItems: ScrollMenuItem.dessertMenuImages)
+                    }
                     
                     // 9. 마지막 배너 3개
                     ForEach(banner2Names, id: \.self) { name in
@@ -177,14 +186,14 @@ struct HomeView: View {
                     }
                     
                     
-
+                    
                     
                 }
             }
         }
         .navigationBarHidden(true)
     }
-            } // 최상단 vstack
+}// 최상단 vstack
 
 #Preview {
     HomeView()
