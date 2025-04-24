@@ -12,7 +12,7 @@ class ReceiptsModel {
     var receiptDate: String // 날짜
     var totalPrice: Int // 총가격
     var cratedAt: Date = Date() // 스캔 날짜
-    var imageData: Data?
+    var imageData: Data? // 스캔한 이미지
     
     init (
         store: String,

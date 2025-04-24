@@ -8,6 +8,7 @@ class ReceiptsViewModel {
     var currentReceipts: [ReceiptsModel] = []
     var selectedImage: UIImage?
     
+    // 사진 하나만 선택할 수 있게
     func startOCR() {
         guard let uiImage = UIImage(named: "receiptImage"),
               let cgImage = uiImage.cgImage else {
@@ -108,6 +109,7 @@ class ReceiptsViewModel {
             }
             
             // 날짜
+            // 이안거 따라쓰기
             if receiptDate == "주문 날짜 없음" {
                 if trimmed.range(of: #"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$"#, options: .regularExpression) != nil {
                     receiptDate = trimmed

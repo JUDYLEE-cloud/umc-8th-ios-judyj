@@ -3,6 +3,7 @@ import SwiftUI
 struct CustomTextField: View {
     let title: String
     @Binding var viewmodeltext: String
+    
     @FocusState var isFocused: Bool
     @State private var isPasswordVisible: Bool = false
     
@@ -57,6 +58,7 @@ struct CustomTextField: View {
                     .foregroundColor(title == "비밀번호 확인" && !isMatching ? Color.red : (isFocused ? Color("green01") : Color("gray01")))
                 }
             .frame(height: 20.02)
+            
             if title == "비밀번호 확인" && !isMatching {
                 Text("일치하지 않습니다")
                     .foregroundColor(.red)

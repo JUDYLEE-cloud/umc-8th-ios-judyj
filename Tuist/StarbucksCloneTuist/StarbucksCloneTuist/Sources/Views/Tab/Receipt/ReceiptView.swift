@@ -106,6 +106,8 @@ private struct ReceiptHistory: View {
             Divider()
                 .foregroundColor(Color("gray01"))
         }
+        // ondelete 써보기
+        // padding horizontal 적용 범위 수정
         .swipeActions(edge: .trailing, allowsFullSwipe: false) {
             Button {
                 deleteReceipt()
@@ -120,38 +122,6 @@ private struct ReceiptHistory: View {
         context.delete(receipt)
     }
 }
-
-//private struct ReceiptHistory: View {
-//    let receipt: ReceiptsModel
-//    @Binding var selectedReceipt: ReceiptsModel?
-//    
-//    var body: some View {
-//        VStack {
-//            HStack {
-//                VStack(alignment: .leading, spacing: 8) {
-//                    Text(receipt.store)
-//                        .font(.mainTextSemiBold18())
-//                    Text(receipt.receiptDate)
-//                        .font(.mainTextMedium16())
-//                        .foregroundColor(Color("gray03"))
-//                    Text("\(receipt.totalPrice)")
-//                        .font(.mainTextSemiBold18())
-//                        .foregroundColor(Color("brown02"))
-//                }
-//                
-//                Spacer()
-//            
-//                Button {
-//                    selectedReceipt = receipt
-//                } label: {
-//                    Image("receiptLogo")
-//                }
-//            }
-//            Divider()
-//                .foregroundColor(Color("gray01"))
-//        }
-//    }
-//}
 
 #Preview {
     ReceiptView(viewModel: ReceiptsViewModel())
