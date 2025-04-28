@@ -34,7 +34,7 @@ struct CustomTabView: View {
                     }
                     .tag(1)
 
-                Text("Third Content")
+                OrderView()
                     .tabItem {
                         Label{
                             Text("Order")

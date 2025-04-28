@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		8B4734A92DBA71760003EA73 /* PBXContainerItemProxy */ = {
+		8B3924982DBE9A9D001059CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B4734902DBA71750003EA73 /* Project object */;
+			containerPortal = 8B39247F2DBE9A9C001059CB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B4734972DBA71750003EA73;
-			remoteInfo = FifthWorkBook;
+			remoteGlobalIDString = 8B3924862DBE9A9C001059CB;
+			remoteInfo = FifthSilsoup;
 		};
-		8B4734B32DBA71760003EA73 /* PBXContainerItemProxy */ = {
+		8B3924A22DBE9A9D001059CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B4734902DBA71750003EA73 /* Project object */;
+			containerPortal = 8B39247F2DBE9A9C001059CB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B4734972DBA71750003EA73;
-			remoteInfo = FifthWorkBook;
+			remoteGlobalIDString = 8B3924862DBE9A9C001059CB;
+			remoteInfo = FifthSilsoup;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B4734982DBA71750003EA73 /* FifthWorkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifthWorkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B4734A82DBA71760003EA73 /* FifthWorkBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifthWorkBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B4734B22DBA71760003EA73 /* FifthWorkBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifthWorkBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3924872DBE9A9C001059CB /* FifthSilsoup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifthSilsoup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3924972DBE9A9D001059CB /* FifthSilsoupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifthSilsoupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3924A12DBE9A9D001059CB /* FifthSilsoupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifthSilsoupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8B47349A2DBA71750003EA73 /* FifthWorkBook */ = {
+		8B3924892DBE9A9C001059CB /* FifthSilsoup */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FifthWorkBook;
+			path = FifthSilsoup;
 			sourceTree = "<group>";
 		};
-		8B4734AB2DBA71760003EA73 /* FifthWorkBookTests */ = {
+		8B39249A2DBE9A9D001059CB /* FifthSilsoupTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FifthWorkBookTests;
+			path = FifthSilsoupTests;
 			sourceTree = "<group>";
 		};
-		8B4734B52DBA71760003EA73 /* FifthWorkBookUITests */ = {
+		8B3924A42DBE9A9D001059CB /* FifthSilsoupUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FifthWorkBookUITests;
+			path = FifthSilsoupUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8B4734952DBA71750003EA73 /* Frameworks */ = {
+		8B3924842DBE9A9C001059CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B4734A52DBA71760003EA73 /* Frameworks */ = {
+		8B3924942DBE9A9D001059CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B4734AF2DBA71760003EA73 /* Frameworks */ = {
+		8B39249E2DBE9A9D001059CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B47348F2DBA71750003EA73 = {
+		8B39247E2DBE9A9C001059CB = {
 			isa = PBXGroup;
 			children = (
-				8B47349A2DBA71750003EA73 /* FifthWorkBook */,
-				8B4734AB2DBA71760003EA73 /* FifthWorkBookTests */,
-				8B4734B52DBA71760003EA73 /* FifthWorkBookUITests */,
-				8B4734992DBA71750003EA73 /* Products */,
+				8B3924892DBE9A9C001059CB /* FifthSilsoup */,
+				8B39249A2DBE9A9D001059CB /* FifthSilsoupTests */,
+				8B3924A42DBE9A9D001059CB /* FifthSilsoupUITests */,
+				8B3924882DBE9A9C001059CB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8B4734992DBA71750003EA73 /* Products */ = {
+		8B3924882DBE9A9C001059CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B4734982DBA71750003EA73 /* FifthWorkBook.app */,
-				8B4734A82DBA71760003EA73 /* FifthWorkBookTests.xctest */,
-				8B4734B22DBA71760003EA73 /* FifthWorkBookUITests.xctest */,
+				8B3924872DBE9A9C001059CB /* FifthSilsoup.app */,
+				8B3924972DBE9A9D001059CB /* FifthSilsoupTests.xctest */,
+				8B3924A12DBE9A9D001059CB /* FifthSilsoupUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +95,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B4734972DBA71750003EA73 /* FifthWorkBook */ = {
+		8B3924862DBE9A9C001059CB /* FifthSilsoup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B4734BC2DBA71760003EA73 /* Build configuration list for PBXNativeTarget "FifthWorkBook" */;
+			buildConfigurationList = 8B3924AB2DBE9A9D001059CB /* Build configuration list for PBXNativeTarget "FifthSilsoup" */;
 			buildPhases = (
-				8B4734942DBA71750003EA73 /* Sources */,
-				8B4734952DBA71750003EA73 /* Frameworks */,
-				8B4734962DBA71750003EA73 /* Resources */,
+				8B3924832DBE9A9C001059CB /* Sources */,
+				8B3924842DBE9A9C001059CB /* Frameworks */,
+				8B3924852DBE9A9C001059CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8B47349A2DBA71750003EA73 /* FifthWorkBook */,
+				8B3924892DBE9A9C001059CB /* FifthSilsoup */,
 			);
-			name = FifthWorkBook;
+			name = FifthSilsoup;
 			packageProductDependencies = (
 			);
-			productName = FifthWorkBook;
-			productReference = 8B4734982DBA71750003EA73 /* FifthWorkBook.app */;
+			productName = FifthSilsoup;
+			productReference = 8B3924872DBE9A9C001059CB /* FifthSilsoup.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B4734A72DBA71760003EA73 /* FifthWorkBookTests */ = {
+		8B3924962DBE9A9D001059CB /* FifthSilsoupTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B4734BF2DBA71760003EA73 /* Build configuration list for PBXNativeTarget "FifthWorkBookTests" */;
+			buildConfigurationList = 8B3924AE2DBE9A9D001059CB /* Build configuration list for PBXNativeTarget "FifthSilsoupTests" */;
 			buildPhases = (
-				8B4734A42DBA71760003EA73 /* Sources */,
-				8B4734A52DBA71760003EA73 /* Frameworks */,
-				8B4734A62DBA71760003EA73 /* Resources */,
+				8B3924932DBE9A9D001059CB /* Sources */,
+				8B3924942DBE9A9D001059CB /* Frameworks */,
+				8B3924952DBE9A9D001059CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B4734AA2DBA71760003EA73 /* PBXTargetDependency */,
+				8B3924992DBE9A9D001059CB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8B4734AB2DBA71760003EA73 /* FifthWorkBookTests */,
+				8B39249A2DBE9A9D001059CB /* FifthSilsoupTests */,
 			);
-			name = FifthWorkBookTests;
+			name = FifthSilsoupTests;
 			packageProductDependencies = (
 			);
-			productName = FifthWorkBookTests;
-			productReference = 8B4734A82DBA71760003EA73 /* FifthWorkBookTests.xctest */;
+			productName = FifthSilsoupTests;
+			productReference = 8B3924972DBE9A9D001059CB /* FifthSilsoupTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8B4734B12DBA71760003EA73 /* FifthWorkBookUITests */ = {
+		8B3924A02DBE9A9D001059CB /* FifthSilsoupUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B4734C22DBA71760003EA73 /* Build configuration list for PBXNativeTarget "FifthWorkBookUITests" */;
+			buildConfigurationList = 8B3924B12DBE9A9D001059CB /* Build configuration list for PBXNativeTarget "FifthSilsoupUITests" */;
 			buildPhases = (
-				8B4734AE2DBA71760003EA73 /* Sources */,
-				8B4734AF2DBA71760003EA73 /* Frameworks */,
-				8B4734B02DBA71760003EA73 /* Resources */,
+				8B39249D2DBE9A9D001059CB /* Sources */,
+				8B39249E2DBE9A9D001059CB /* Frameworks */,
+				8B39249F2DBE9A9D001059CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B4734B42DBA71760003EA73 /* PBXTargetDependency */,
+				8B3924A32DBE9A9D001059CB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8B4734B52DBA71760003EA73 /* FifthWorkBookUITests */,
+				8B3924A42DBE9A9D001059CB /* FifthSilsoupUITests */,
 			);
-			name = FifthWorkBookUITests;
+			name = FifthSilsoupUITests;
 			packageProductDependencies = (
 			);
-			productName = FifthWorkBookUITests;
-			productReference = 8B4734B22DBA71760003EA73 /* FifthWorkBookUITests.xctest */;
+			productName = FifthSilsoupUITests;
+			productReference = 8B3924A12DBE9A9D001059CB /* FifthSilsoupUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8B4734902DBA71750003EA73 /* Project object */ = {
+		8B39247F2DBE9A9C001059CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					8B4734972DBA71750003EA73 = {
+					8B3924862DBE9A9C001059CB = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					8B4734A72DBA71760003EA73 = {
+					8B3924962DBE9A9D001059CB = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 8B4734972DBA71750003EA73;
+						TestTargetID = 8B3924862DBE9A9C001059CB;
 					};
-					8B4734B12DBA71760003EA73 = {
+					8B3924A02DBE9A9D001059CB = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 8B4734972DBA71750003EA73;
+						TestTargetID = 8B3924862DBE9A9C001059CB;
 					};
 				};
 			};
-			buildConfigurationList = 8B4734932DBA71750003EA73 /* Build configuration list for PBXProject "FifthWorkBook" */;
+			buildConfigurationList = 8B3924822DBE9A9C001059CB /* Build configuration list for PBXProject "FifthSilsoup" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 8B47348F2DBA71750003EA73;
+			mainGroup = 8B39247E2DBE9A9C001059CB;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 8B4734992DBA71750003EA73 /* Products */;
+			productRefGroup = 8B3924882DBE9A9C001059CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B4734972DBA71750003EA73 /* FifthWorkBook */,
-				8B4734A72DBA71760003EA73 /* FifthWorkBookTests */,
-				8B4734B12DBA71760003EA73 /* FifthWorkBookUITests */,
+				8B3924862DBE9A9C001059CB /* FifthSilsoup */,
+				8B3924962DBE9A9D001059CB /* FifthSilsoupTests */,
+				8B3924A02DBE9A9D001059CB /* FifthSilsoupUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8B4734962DBA71750003EA73 /* Resources */ = {
+		8B3924852DBE9A9C001059CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B4734A62DBA71760003EA73 /* Resources */ = {
+		8B3924952DBE9A9D001059CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B4734B02DBA71760003EA73 /* Resources */ = {
+		8B39249F2DBE9A9D001059CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8B4734942DBA71750003EA73 /* Sources */ = {
+		8B3924832DBE9A9C001059CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B4734A42DBA71760003EA73 /* Sources */ = {
+		8B3924932DBE9A9D001059CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B4734AE2DBA71760003EA73 /* Sources */ = {
+		8B39249D2DBE9A9D001059CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8B4734AA2DBA71760003EA73 /* PBXTargetDependency */ = {
+		8B3924992DBE9A9D001059CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B4734972DBA71750003EA73 /* FifthWorkBook */;
-			targetProxy = 8B4734A92DBA71760003EA73 /* PBXContainerItemProxy */;
+			target = 8B3924862DBE9A9C001059CB /* FifthSilsoup */;
+			targetProxy = 8B3924982DBE9A9D001059CB /* PBXContainerItemProxy */;
 		};
-		8B4734B42DBA71760003EA73 /* PBXTargetDependency */ = {
+		8B3924A32DBE9A9D001059CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B4734972DBA71750003EA73 /* FifthWorkBook */;
-			targetProxy = 8B4734B32DBA71760003EA73 /* PBXContainerItemProxy */;
+			target = 8B3924862DBE9A9C001059CB /* FifthSilsoup */;
+			targetProxy = 8B3924A22DBE9A9D001059CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		8B4734BA2DBA71760003EA73 /* Debug */ = {
+		8B3924A92DBE9A9D001059CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +332,7 @@
 			};
 			name = Debug;
 		};
-		8B4734BB2DBA71760003EA73 /* Release */ = {
+		8B3924AA2DBE9A9D001059CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,28 +388,28 @@
 			};
 			name = Release;
 		};
-		8B4734BD2DBA71760003EA73 /* Debug */ = {
+		8B3924AC2DBE9A9D001059CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FifthWorkBook/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FifthSilsoup/Preview Content\"";
 				DEVELOPMENT_TEAM = 47UM88R722;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 정보 사용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.BlipADA2025Ch2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthSilsoup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -417,28 +417,28 @@
 			};
 			name = Debug;
 		};
-		8B4734BE2DBA71760003EA73 /* Release */ = {
+		8B3924AD2DBE9A9D001059CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FifthWorkBook/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FifthSilsoup/Preview Content\"";
 				DEVELOPMENT_TEAM = 47UM88R722;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 정보 사용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.BlipADA2025Ch2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthSilsoup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,7 +446,7 @@
 			};
 			name = Release;
 		};
-		8B4734C02DBA71760003EA73 /* Debug */ = {
+		8B3924AF2DBE9A9D001059CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,16 +456,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthWorkBookTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthSilsoupTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifthWorkBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FifthWorkBook";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifthSilsoup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FifthSilsoup";
 			};
 			name = Debug;
 		};
-		8B4734C12DBA71760003EA73 /* Release */ = {
+		8B3924B02DBE9A9D001059CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,16 +475,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthWorkBookTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthSilsoupTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifthWorkBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FifthWorkBook";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifthSilsoup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FifthSilsoup";
 			};
 			name = Release;
 		};
-		8B4734C32DBA71760003EA73 /* Debug */ = {
+		8B3924B22DBE9A9D001059CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -492,16 +492,16 @@
 				DEVELOPMENT_TEAM = 47UM88R722;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthWorkBookUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthSilsoupUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FifthWorkBook;
+				TEST_TARGET_NAME = FifthSilsoup;
 			};
 			name = Debug;
 		};
-		8B4734C42DBA71760003EA73 /* Release */ = {
+		8B3924B32DBE9A9D001059CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -509,55 +509,55 @@
 				DEVELOPMENT_TEAM = 47UM88R722;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthWorkBookUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.judyj.FifthSilsoupUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FifthWorkBook;
+				TEST_TARGET_NAME = FifthSilsoup;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B4734932DBA71750003EA73 /* Build configuration list for PBXProject "FifthWorkBook" */ = {
+		8B3924822DBE9A9C001059CB /* Build configuration list for PBXProject "FifthSilsoup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B4734BA2DBA71760003EA73 /* Debug */,
-				8B4734BB2DBA71760003EA73 /* Release */,
+				8B3924A92DBE9A9D001059CB /* Debug */,
+				8B3924AA2DBE9A9D001059CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B4734BC2DBA71760003EA73 /* Build configuration list for PBXNativeTarget "FifthWorkBook" */ = {
+		8B3924AB2DBE9A9D001059CB /* Build configuration list for PBXNativeTarget "FifthSilsoup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B4734BD2DBA71760003EA73 /* Debug */,
-				8B4734BE2DBA71760003EA73 /* Release */,
+				8B3924AC2DBE9A9D001059CB /* Debug */,
+				8B3924AD2DBE9A9D001059CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B4734BF2DBA71760003EA73 /* Build configuration list for PBXNativeTarget "FifthWorkBookTests" */ = {
+		8B3924AE2DBE9A9D001059CB /* Build configuration list for PBXNativeTarget "FifthSilsoupTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B4734C02DBA71760003EA73 /* Debug */,
-				8B4734C12DBA71760003EA73 /* Release */,
+				8B3924AF2DBE9A9D001059CB /* Debug */,
+				8B3924B02DBE9A9D001059CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B4734C22DBA71760003EA73 /* Build configuration list for PBXNativeTarget "FifthWorkBookUITests" */ = {
+		8B3924B12DBE9A9D001059CB /* Build configuration list for PBXNativeTarget "FifthSilsoupUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B4734C32DBA71760003EA73 /* Debug */,
-				8B4734C42DBA71760003EA73 /* Release */,
+				8B3924B22DBE9A9D001059CB /* Debug */,
+				8B3924B32DBE9A9D001059CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8B4734902DBA71750003EA73 /* Project object */;
+	rootObject = 8B39247F2DBE9A9C001059CB /* Project object */;
 }
