@@ -1,10 +1,10 @@
+import Foundation
 import SwiftUI
 import MapKit
 import Observation
 
 @Observable
 final class SearchMapViewModel {
-    
     var cameraPosition: MapCameraPosition = .userLocation(fallback: .automatic)
     var currentMapCenter: CLLocationCoordinate2D?
     
@@ -24,24 +24,13 @@ final class SearchMapViewModel {
     }
     var searchResults: [Place] = []
     
-    var region: MKCoordinateRegion = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780),
-            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+    func setInitialCameraPosition(location: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegion(
+            center: location,
+            span: MKCoordinateSpan(latitudeDelta: 0.09, longitudeDelta: 0.09) // 대략 10km
         )
-    
-    // 마커
-    var makers: [Marker] = [
-        .init("중앙대학교", coordinate: .init(latitude: 37.504675, longitude: 126.957034)),
-        .init("용산 CGV", coordinate: .init(latitude: 37.529598, longitude: 126.963946))
-    ]
-
-    let geofenceCoordinate = CLLocationCoordinate2D(latitude: 36.013024, longitude: 129.326010) // 본인의 학교 위도 / 경도로 넣어보세요
-    let geofenceRadius: CLLocationDistance = 200
-    let geofenceIdentifier = "포항공대"
-    
-    init() {
-        LocationManager.shared.startMonitoringGeofence(center: geofenceCoordinate, radius: geofenceRadius, identifier: geofenceIdentifier)
-    }
+        self.cameraPosition = .region(region)
+        }
     
     func search(query: String, to locaation: CLLocation) {
         let request = MKLocalSearch.Request()
@@ -57,4 +46,14 @@ final class SearchMapViewModel {
             }
         }
     }
+    
+    func updateFromLocation(_ location: CLLocation?) {
+        guard let location = location else { return }
+        // 사용자의 위치를 기준으로 지도 중심을 업데이트
+        cameraPosition = .region(MKCoordinateRegion(
+            center: location.coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.09, longitudeDelta: 0.09)
+        ))
+    }
+
 }

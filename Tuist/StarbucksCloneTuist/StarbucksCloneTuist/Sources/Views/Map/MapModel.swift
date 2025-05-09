@@ -29,6 +29,7 @@ struct PropertiesModel: Codable {
     let category: String
     let yCoordinate: Double
     let xCoordinate: Double
+    let storeImageName: String?
 
     // JSON key랑 Swift property랑 이름이 다를 때 매핑
     private enum CodingKeys: String, CodingKey {
@@ -40,6 +41,20 @@ struct PropertiesModel: Codable {
         case yCoordinate = "Ycoordinate"
         case xCoordinate = "Xcoordinate"
     }
+    
+    // 후에 json 파일에 이미지 넣으면 삭제
+    init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            seq = try container.decode(String.self, forKey: .seq)
+            storeName = try container.decode(String.self, forKey: .storeName)
+            address = try container.decode(String.self, forKey: .address)
+            telephone = try container.decode(String.self, forKey: .telephone)
+            category = try container.decode(String.self, forKey: .category)
+            yCoordinate = try container.decode(Double.self, forKey: .yCoordinate)
+            xCoordinate = try container.decode(Double.self, forKey: .xCoordinate)
+            storeImageName = nil // 디코딩할 게 없으니까 기본값 nil로
+        }
+    
 }
 
 struct GeometryModel: Codable {

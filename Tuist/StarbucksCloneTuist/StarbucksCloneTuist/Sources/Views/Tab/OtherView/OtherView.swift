@@ -107,9 +107,6 @@ struct OtherView: View {
         let title: String
         
         var body: some View {
-            Button {
-                print("\(title) 클릭됨")
-            } label: {
                 HStack {
                     Image(imageName)
                         .frame(width: 42, height: 42)
@@ -119,8 +116,6 @@ struct OtherView: View {
                         .foregroundColor(.black)
                 }
                 .frame(width: 157, height: 32, alignment: .leading)
-            }
-            .buttonStyle(.plain)
         }
     }
     private var Pay: some View {
@@ -138,6 +133,7 @@ struct OtherView: View {
                 PayItem(imageName: "OtherIcon2", title: "카드 교환권 등록")
             }
             .padding(.vertical, 8)
+            
             HStack {
                 PayItem(imageName: "OtherIcon3", title: "쿠폰 등록")
                 Spacer()
@@ -166,7 +162,9 @@ struct OtherView: View {
            }
            .padding(.vertical, 8)
            HStack {
-               PayItem(imageName: "OtherIcon7", title: "매장 정보")
+               NavigationLink(destination: StoreInformationView()) {
+                   PayItem(imageName: "OtherIcon7", title: "매장 정보")
+               }
                Spacer()
                PayItem(imageName: "OtherIcon8", title: "반납기 정보")
            }

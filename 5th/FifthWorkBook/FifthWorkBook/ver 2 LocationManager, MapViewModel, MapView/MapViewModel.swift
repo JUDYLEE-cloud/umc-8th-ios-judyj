@@ -17,13 +17,13 @@ final class MapViewModel {
              )
     ]
     
-    // 챗지피티
     func updateFromLocation(_ location: CLLocation?) {
         guard let location = location else { return }
-        // 예시: 사용자의 위치를 기준으로 지도 중심을 업데이트
+        // 사용자의 위치를 기준으로 지도 중심을 업데이트
         cameraPosition = .region(MKCoordinateRegion(
             center: location.coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         ))
     }
 }
+

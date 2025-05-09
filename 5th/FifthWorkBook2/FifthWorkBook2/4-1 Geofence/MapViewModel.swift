@@ -18,7 +18,6 @@ final class MapViewModel {
             self.coordinate = coordinate
         }
     }
-    
     var makers: [CustomMarker] = [
         .init("중앙대학교", coordinate: .init(latitude: 37.504675, longitude: 126.957034)),
         .init("용산 CGV", coordinate: .init(latitude: 37.529598, longitude: 126.963946))

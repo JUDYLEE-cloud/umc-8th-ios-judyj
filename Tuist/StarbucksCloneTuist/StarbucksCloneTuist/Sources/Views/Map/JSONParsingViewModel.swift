@@ -2,7 +2,7 @@
 import Foundation
 
 @Observable
-class JSONParsingViewModel {
+class JSONParsingViewModel: ObservableObject {
     var mapInfo: MapInfoModel?
     
     func loadMapInfo(completion: @escaping (Result<MapInfoModel, Error>) -> Void) {

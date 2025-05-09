@@ -31,7 +31,7 @@ struct DrinkBodyView: View {
                         .resizable()
                         .frame(width: 60, height: 60)
                     
-                    VStack(alignment: .leading) {
+                    LazyVStack(alignment: .leading) {
                         VStack(alignment: .leading) {
                             HStack(alignment: .top, spacing: 1) {
                                 Text(item.menuName)

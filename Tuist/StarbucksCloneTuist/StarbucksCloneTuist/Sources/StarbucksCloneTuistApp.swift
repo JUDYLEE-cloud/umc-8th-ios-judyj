@@ -11,17 +11,12 @@ struct StarbucksCloneTuistApp: App {
     
     var body: some Scene {
         WindowGroup {
-                        if isLoggedIn {
-                            CustomTabView()
-                        } else {
-                            LoginView()
-                        }
-                    }
-        .modelContainer(for: ReceiptsModel.self)
-            
-//                    WindowGroup {
-//                        ReceiptView(viewModel: ReceiptsViewModel())
-//                    }
-                    //.modelContainer(for: ReceiptsModel.self)
+            // if isLoggedIn {
+                CustomTabView()
+//            } else {
+//                LoginView()
+//            }
         }
+        .modelContainer(for: ReceiptsModel.self)
     }
+}

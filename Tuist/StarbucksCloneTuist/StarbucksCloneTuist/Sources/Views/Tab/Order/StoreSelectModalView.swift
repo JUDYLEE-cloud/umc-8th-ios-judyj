@@ -1,28 +1,69 @@
 import SwiftUI
+import MapKit
 
 struct StoreSelectModalView: View {
-    var viewModel = JSONParsingViewModel()
+    @State private var isMapView = false
+    
+    @Bindable private var viewModel: SearchMapViewModel = .init()
+    @Bindable private var locationManager: LocationManager = .shared
+    @State private var searchText = ""
+    @State private var keywordSearchText = ""
+    
+    @StateObject private var listViewModel = JSONParsingViewModel()
+    
+    @State private var selectedTab: Int = 0
     
     var body: some View {
         VStack {
-            UpperBar()
-            
-            ScrollView {
-                if let mapInfo = viewModel.mapInfo {
-                    ForEach(mapInfo.features) { feature in
-                        VStack {
-                            Text(feature.properties.storeName)
-                            Text(feature.properties.address)
-                        }
+            UpperBar(isMapView: $isMapView)
+                .padding(.top, 11)
+    
+            // 지도 형식
+            if isMapView {
+                TextField("검색", text: $searchText, onCommit: {
+                    let fallbackLocation = CLLocation(latitude: 37.5665, longitude: 126.9780) // 서울
+                    let location = locationManager.currentLocation ?? fallbackLocation
+                    viewModel.search(query: searchText, to: location)
+                })
+                    .font(.mainTextSemiBold12())
+                    .foregroundStyle(Color.gray)
+                    .padding(.vertical, 4)
+                    .padding(.leading, 7)
+                    .background(Color("gray08"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .padding(.bottom, 14)
+                
+                StoreMapView(viewModel: viewModel, searchText: $searchText)
+                    .padding(.horizontal, -32.5)
+            } else {
+                // 리스트 형식
+                TextField("검색", text: $keywordSearchText)
+                    .font(.mainTextSemiBold12())
+                    .foregroundStyle(Color.gray)
+                    .padding(.vertical, 4)
+                    .padding(.leading, 7)
+                    .background(Color("gray08"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                  
+                Spacer()
+                    .frame(height: 22)
+                
+                StoreListUpperBar(selectedTab: $selectedTab)
+                
+                Group {
+                    switch selectedTab {
+                    case 0: StoreListView(viewModel: listViewModel, keywordSearchText: $keywordSearchText, locationManager: locationManager)
+                    case 1: FavoriteStoreList()
+                    default: EmptyView()
                     }
-                } else {
-                    Text("로딩 중...")
                 }
+                
             }
+            
         }
         .padding(.horizontal, 32.5)
         .onAppear {
-            viewModel.loadMapInfo{ result in
+            listViewModel.loadMapInfo { result in
                 switch result {
                 case .success(_): break
                 case .failure(_): print("json 파일 로드 실패")
@@ -32,7 +73,148 @@ struct StoreSelectModalView: View {
     }
 }
 
+struct StoreListUpperBar: View {
+    @Binding var selectedTab: Int
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Button {
+                    selectedTab = 0
+                } label: {
+                    Text("가까운 매장")
+                        .font(selectedTab == 0 ? .mainTextSemiBold13() : .mainTextRegular13())
+                        .foregroundColor(selectedTab == 0 ? Color("black03") : Color("gray03"))
+                }
+                .buttonStyle(.plain)
+                
+                Rectangle()
+                    .frame(width: 1, height: 12)
+                    .foregroundStyle(Color("gray02"))
+                
+                Button {
+                    selectedTab = 1
+                } label: {
+                    Text("자주 가는 매장")
+                        .font(selectedTab == 1 ? .mainTextSemiBold13() : .mainTextRegular13())
+                        .foregroundColor(selectedTab == 1 ? Color("black03") : Color("gray03"))
+                }
+                .buttonStyle(.plain)
+                
+                Spacer()
+            }
+            .padding(.bottom, 17)
+            
+            Divider()
+        }
+    }
+}
+
+enum StoreCategory {
+    case reserve
+    case drive
+    case normal
+
+    init(categoryString: String) {
+        if categoryString.contains("리저브") {
+            self = .reserve
+        } else if categoryString.contains("DT") {
+            self = .drive
+        } else {
+            self = .normal
+        }
+    }
+}
+
+struct StoreListView: View {
+    @ObservedObject var viewModel: JSONParsingViewModel
+    @Binding var keywordSearchText: String
+    @Bindable var locationManager: LocationManager
+    
+    var body: some View {
+        ScrollView(showsIndicators: false) {
+            Spacer()
+                .frame(height: 20)
+            if let mapInfo = viewModel.mapInfo {
+                let userLocation = locationManager.currentLocation ?? CLLocation(latitude: 37.5665, longitude: 126.9780)
+                
+                let sortedFeatures = mapInfo.features
+                    .filter { feature in
+                        keywordSearchText.isEmpty ||
+                        feature.properties.storeName.localizedCaseInsensitiveContains(keywordSearchText) ||
+                        feature.properties.address.localizedCaseInsensitiveContains(keywordSearchText)
+                    }
+                    .map { feature -> (FeatureModel, Double) in
+                        let storeLocation = CLLocation(latitude: feature.geometry.coordinates[1], longitude: feature.geometry.coordinates[0])
+                        let distance = userLocation.distance(from: storeLocation)
+                        return (feature, distance)
+                    }
+                    .sorted { $0.1 < $1.1 }
+                
+                ForEach(sortedFeatures, id: \.0.id) { feature, distance in
+                    let storeCategory = StoreCategory(categoryString: feature.properties.category)
+                    
+                    HStack(spacing: 0) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.black)
+                            .frame(width: 83, height: 83)
+                        
+                        VStack(alignment: .leading) {
+                            Text(feature.properties.storeName)
+                                .font(.mainTextSemiBold13())
+                                .foregroundColor(Color("black03"))
+                            
+                            Text(feature.properties.address)
+                                .font(.system(size: 10))
+                                .foregroundColor(Color("gray02"))
+                            
+                            Spacer()
+                            
+                            HStack(alignment: .bottom, spacing: 4) {
+                                switch storeCategory {
+                                case .reserve:
+                                    Image("reserve")
+                                        .resizable()
+                                        .frame(width: 18, height: 18)
+                                case .drive:
+                                    Image("drive")
+                                        .resizable()
+                                        .frame(width: 18, height: 18)
+                                case .normal:
+                                    Color.clear
+                                        .frame(width: 18, height: 18)
+                                }
+                                
+                                Spacer()
+                                
+                                Text(formatDistance(distance))
+                                    .font(.system(size: 12))
+                            }
+                        }
+                        .padding(.vertical, 6)
+                        .frame(height: 83)
+                        .padding(.leading, 16)
+                    }
+                    .padding(.bottom, 8)
+                }
+            } else {
+                Text("로딩 중...")
+            }
+        }
+    }
+    
+    private func formatDistance(_ distance: Double) -> String {
+        if distance >= 1000 {
+            return String(format: "%.1fkm", distance / 1000)
+        } else {
+            return String(format: "%.0fm", distance)
+        }
+    }
+}
+
 struct UpperBar: View {
+    @Binding var isMapView: Bool
+    
     var body: some View {
         VStack {
             RoundedRectangle(cornerRadius: 10)
@@ -44,11 +226,26 @@ struct UpperBar: View {
                     .font(.system(size: 16))
                 HStack {
                     Spacer()
-                    Image(systemName: "map")
-                        .foregroundColor(Color("gray04"))
+                    
+                    Button {
+                        isMapView.toggle()
+                    } label: {
+                        Image(systemName: isMapView ? "list.bullet" : "map")
+                            .foregroundColor(Color("gray04"))
+                    }
                 }
             }
-            .padding(.vertical, 24)
+            .padding(.vertical, 20)
+        }
+    }
+}
+
+struct FavoriteStoreList: View {
+    var body: some View {
+        VStack {
+            Text("자주 가는 매장 리스트")
+                .padding()
+            Spacer()
         }
     }
 }
