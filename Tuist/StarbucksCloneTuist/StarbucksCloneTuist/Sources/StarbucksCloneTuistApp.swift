@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import KakaoSDKCommon
 
 @main
 struct StarbucksCloneTuistApp: App {
@@ -7,15 +8,16 @@ struct StarbucksCloneTuistApp: App {
     
     init() {
         StarbucksCloneTuistFontFamily.registerAllCustomFonts()
+        KakaoSDK.initSDK(appKey: "5e47de3dd52ca27f6de5f544c1ca9947")
     }
     
     var body: some Scene {
         WindowGroup {
-            // if isLoggedIn {
+            if isLoggedIn {
                 CustomTabView()
-//            } else {
-//                LoginView()
-//            }
+            } else {
+                LoginView()
+            }
         }
         .modelContainer(for: ReceiptsModel.self)
     }

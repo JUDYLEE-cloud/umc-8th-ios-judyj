@@ -4,6 +4,8 @@ struct SignupView: View {
     @StateObject private var viewModel = SignupViewModel()
     @Environment(\.dismiss) var dismiss
     
+    @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
+    
     private var isSignupDisabled: Bool {
         viewModel.signupModel.nickname.isEmpty || viewModel.signupModel.id.isEmpty || viewModel.signupModel.password.isEmpty || viewModel.signupModel.passwordConfirm.isEmpty
     }
@@ -17,6 +19,7 @@ struct SignupView: View {
             
             VStack{
                 CustomTextField(title: "닉네임", viewmodeltext: $viewModel.signupModel.nickname)
+                
                 CustomTextField(title: "아이디", viewmodeltext: $viewModel.signupModel.id)
                 
                 CustomTextField(title: "비밀번호", viewmodeltext: $viewModel.signupModel.password)
@@ -31,7 +34,14 @@ struct SignupView: View {
                 Spacer()
                 
                 Button {
-                    viewModel.signup()
+                    // viewModel.signup()
+                    
+                    AuthKeyChainService.shared.saveLoginInfoToKeychain(nickname: viewModel.signupModel.nickname, id: viewModel.signupModel.id, password: viewModel.signupModel.password)
+                    
+                    UserDefaults.standard.set("normal", forKey: "loginMethod")
+                    
+                    isLoggedIn = true
+                    
                     dismiss()
                 } label: {
                     GreenButton(title: "생성하기", isDisabled: isSignupDisabled)

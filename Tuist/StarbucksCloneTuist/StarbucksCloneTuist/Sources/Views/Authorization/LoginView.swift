@@ -1,10 +1,14 @@
 import SwiftUI
 import Observation
 
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
+
 struct LoginView: View {
     @State var router = NavigationRouter()
     @StateObject private var viewModel = LoginViewModel()
-   
+    
     var body: some View {
         NavigationStack(path: $router.path) {
             VStack {
@@ -68,6 +72,8 @@ struct LoginView: View {
         
         private struct SocialLogin: View {
             let router: NavigationRouter
+            @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
+            
             var body: some View {
                 VStack(spacing: 19) {
                     Button {
@@ -79,13 +85,51 @@ struct LoginView: View {
                             .foregroundColor(Color("gray04"))
                     }
                     
-                    SocialLoginButton(title: "카카오 로그인", image: "KakaoLogo", fontcolor: 0x000000, backgroundcolor: 0xFEE500)
+                    Button {
+                        // 카카오 앱이 있는 경우
+                        if UserApi.isKakaoTalkLoginAvailable() {
+                            UserApi.shared.loginWithKakaoTalk { oauthToken, error in
+                                if let token = oauthToken {
+                                    UserApi.shared.me { user, error in
+                                        if let user = user,
+                                           let nickname = user.kakaoAccount?.profile?.nickname {
+                                            AuthKeyChainService.shared.saveKakaoLoginInfoToKeychain(nickname: nickname, token: token.accessToken)
+                                            
+                                            UserDefaults.standard.set("kakao", forKey: "loginMethod")
+                                            
+                                            isLoggedIn = true
+                                        }
+                                    }
+                                }
+                            }
+                           } else {
+                               // 없는 경우
+                               UserApi.shared.loginWithKakaoAccount { oauthToken, error in
+                                   if let token = oauthToken {
+                                       print("✅ 웹으로 로그인 성공: \(token.accessToken)")
+                                       UserApi.shared.me { user, error in
+                                           if let user = user,
+                                              let nickname = user.kakaoAccount?.profile?.nickname {
+                                               AuthKeyChainService.shared.saveKakaoLoginInfoToKeychain(nickname: nickname, token: token.accessToken)
+                                               
+                                               UserDefaults.standard.set("kakao", forKey: "loginMethod")
+                                               
+                                               isLoggedIn = true
+                                           }
+                                       }
+                                   }
+                               }
+                           }
+                    } label: {
+                        SocialLoginButton(title: "카카오 로그인", image: "KakaoLogo", fontcolor: 0x000000, backgroundcolor: 0xFEE500)
+                    }
                     
                     SocialLoginButton(title: "Apple로 로그인", image: "AppleLogo", fontcolor: 0xFFFFFF, backgroundcolor: 0x000000)
                 }
                 .frame(width: 306, height: 144)
             }
         }
+    
         private struct SocialLoginButton: View {
             let title: String
             let image: String

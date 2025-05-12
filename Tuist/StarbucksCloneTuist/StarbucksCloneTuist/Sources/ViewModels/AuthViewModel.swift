@@ -1,8 +1,6 @@
 import Foundation
 import SwiftUI
 
-//수정해~
-
 class LoginViewModel: ObservableObject {
     @Published var loginModel: LoginModel = LoginModel(id: "", password: "")
     

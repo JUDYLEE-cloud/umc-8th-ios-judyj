@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct OtherView: View {
-    @AppStorage("usernickname") private var storedNickname: String = ""
+    //@AppStorage("usernickname") private var storedNickname: String = ""
     // 사인업 뷰 모델로 불러오기
+    
+    @State private var nickname: String = "(저장된 닉네임)"
     
     var body: some View {
         NavigationStack {
@@ -11,7 +13,9 @@ struct OtherView: View {
                 ScrollView {
                     ZStack {
                         // Color(hex: 0xF8F8F8).ignoresSafeArea()
-                        Color("white01").ignoresSafeArea()
+                        Color("white01")
+                            .ignoresSafeArea()
+                        
                         VStack {
                             User
                             Spacer()
@@ -26,14 +30,21 @@ struct OtherView: View {
                         .frame(height: 683)
                     }
                 }
-                }
+            }
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
-            
+        .task {
+            if let loadedNickname = AuthKeyChainService.shared.loadNicknameFromKeychain() {
+                print("✅ 닉네임 로드 성공:", loadedNickname)
+                nickname = loadedNickname
+            } else {
+                print("❌ 닉네임 로드 실패")
+                nickname = "(닉네임 불러오기 실패)"
+            }
+        }
     }
-    
-    
+
     private var UpperBar: some View {
             HStack {
                 // labeledcontent: text와 button 같이 묶기
@@ -58,7 +69,7 @@ struct OtherView: View {
     
     private var User: some View {
         VStack {
-             Text("\(Text(storedNickname.isEmpty ? "(작성한 닉네임)" : storedNickname).foregroundColor(Color("green01"))) 님\n환영합니다! 🙌🏻")
+             Text("\(Text(nickname).foregroundColor(Color("green01"))) 님\n환영합니다! 🙌🏻")
                 .font(.mainTextSemiBold24())
                 .multilineTextAlignment(.center)
                 .lineSpacing(10)
