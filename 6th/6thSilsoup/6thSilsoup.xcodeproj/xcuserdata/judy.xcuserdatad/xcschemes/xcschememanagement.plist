@@ -2,9 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>API_URL</key>
-	<string>https://d911-141-223-234-234.ngrok-free.app</string>
-	<key>Image_URL</key>
-	<string>https://66de-141-223-234-234.ngrok-free.app</string>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>6thSilsoup.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 </dict>
 </plist>
