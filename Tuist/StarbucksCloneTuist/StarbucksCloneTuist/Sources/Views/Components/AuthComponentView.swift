@@ -57,7 +57,7 @@ struct CustomTextField: View {
                     .padding(.top, -5)
                     .foregroundColor(title == "비밀번호 확인" && !isMatching ? Color.red : (isFocused ? Color("green01") : Color("gray01")))
                 }
-            .frame(height: 20.02)
+                .frame(height: 20.02)
             
             if title == "비밀번호 확인" && !isMatching {
                 Text("일치하지 않습니다")

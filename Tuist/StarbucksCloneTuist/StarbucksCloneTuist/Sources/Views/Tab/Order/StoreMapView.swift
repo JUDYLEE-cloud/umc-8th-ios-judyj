@@ -36,7 +36,6 @@ struct StoreMapView: View {
                                     .scaledToFit()
                                     .frame(width: 20)
                                     .padding(.bottom, 8)
-                                    
                             }
                         }
                     }

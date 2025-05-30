@@ -13,12 +13,28 @@ struct StarbucksCloneTuistApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if isLoggedIn {
-                CustomTabView()
-            } else {
-                LoginView()
-            }
+            //CustomTabView()
+            
+//            if isLoggedIn {
+//                CustomTabView()
+//            } else {
+//                LoginView()
+//            }
+            
+            StoreInformationView()
         }
         .modelContainer(for: ReceiptsModel.self)
+    }
+}
+
+
+extension Color {
+    init(hex: Int) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xFF) / 255,
+            green: Double((hex >> 8) & 0xFF) / 255,
+            blue: Double((hex >> 0) & 0xFF) / 255
+        )
     }
 }

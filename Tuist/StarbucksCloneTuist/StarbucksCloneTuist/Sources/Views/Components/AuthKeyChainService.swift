@@ -7,6 +7,7 @@ import Alamofire
 class AuthKeyChainService {
     static let shared = AuthKeyChainService()
     
+    // 일반 로그인
     @discardableResult
     func saveLoginInfoToKeychain(nickname: String, id: String, password: String) -> OSStatus {
         let loginInfo: [String : String] = [
@@ -35,6 +36,7 @@ class AuthKeyChainService {
         return status
     }
     
+    // 일반 로그인 정보 가져오기
     @discardableResult
     func getNicknameFromKeychain() -> String? {
         // 1. 검색 쿼리 구성
@@ -72,12 +74,12 @@ class AuthKeyChainService {
                 return nickname
             }
         }
-        
         print("❌ Login Keychain load 실패 - kakao 항목 외에 닉네임 없음")
         return nil
     }
     
     
+    // 카카오 로그인
     @discardableResult
     func saveKakaoLoginInfoToKeychain(nickname: String, token: String) -> OSStatus {
         let loginInfo: [String : String] = [
@@ -105,6 +107,7 @@ class AuthKeyChainService {
         return status
     }
     
+    // 카카오 로그인 닉네임 가져오기
     func getKakaoNicknameFromKeychain() -> String? {
         let query: [String : Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -157,9 +160,9 @@ class AuthKeyChainService {
                 print("✅ (fallback) 일반 닉네임 로드 성공")
                 return normalNickname
             }
-            
             print("❌ 닉네임 로드 실패 - 아무 것도 없음")
             return nil
         }
     }
+    
 }

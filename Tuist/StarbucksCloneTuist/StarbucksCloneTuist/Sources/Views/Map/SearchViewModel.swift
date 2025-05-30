@@ -22,6 +22,7 @@ final class SearchMapViewModel {
             self.mapItem = mapItem
         }
     }
+    
     var searchResults: [Place] = []
     
     func setInitialCameraPosition(location: CLLocationCoordinate2D) {

@@ -2,9 +2,10 @@ import SwiftUI
 
 struct StoreInformationView: View {
     @State private var selectedTab: Int = 0
+    @State private var isShowingNoneResultAlert = false
     
-    @Bindable private var viewModel: SearchMapViewModel = .init()
-    @State private var searchText = ""
+    @State private var isMapRouteLoading = false
+    @StateObject private var routeViewModel = RouteViewModel()
     
     @Environment(\.dismiss) var dismiss
     
@@ -67,15 +68,30 @@ struct StoreInformationView: View {
             
             Group {
                 switch selectedTab {
-                case 0: StoreMapView(viewModel: viewModel, searchText: $searchText)
-                case 1: Text("길찾기")
-                default: EmptyView()
+                case 0:
+                    AnyView(MapResultView(viewModel: routeViewModel))
+                case 1:
+                    AnyView(FindMapVIew(isShowingNoneResultAlert: $isShowingNoneResultAlert, selectedTab: $selectedTab, viewModel: routeViewModel, isMapRouteLoading: $isMapRouteLoading))
+                default:
+                    AnyView(EmptyView())
                 }
             }
-        
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
+        .overlay {
+            if isShowingNoneResultAlert {
+                CustomAlert(title: "검색 결과가 존재하지 않습니다.") {
+                    isShowingNoneResultAlert = false
+                }
+                .ignoresSafeArea()
+            }
+        }
+        .overlay {
+            if isMapRouteLoading {
+                CustomLoading(title: "경로 탐색 중..")
+            }
+        }
     }
 }
 
