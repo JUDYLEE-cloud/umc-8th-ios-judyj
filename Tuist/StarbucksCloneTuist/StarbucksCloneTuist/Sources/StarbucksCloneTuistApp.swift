@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import KakaoSDKCommon
+import SwiftData
 
 @main
 struct StarbucksCloneTuistApp: App {
@@ -13,17 +14,16 @@ struct StarbucksCloneTuistApp: App {
     
     var body: some Scene {
         WindowGroup {
-            //CustomTabView()
-            
 //            if isLoggedIn {
 //                CustomTabView()
 //            } else {
 //                LoginView()
 //            }
             
-            StoreInformationView()
+            CustomTabView()
+
         }
-        .modelContainer(for: ReceiptsModel.self)
+        .modelContainer(for: [ReceiptsModel.self, Card.self])
     }
 }
 

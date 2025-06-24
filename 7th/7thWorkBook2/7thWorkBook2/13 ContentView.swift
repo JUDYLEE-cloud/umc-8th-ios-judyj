@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var combineViewModel: CombineViewModel = .init()
     
     var body: some View {
         VStack(spacing: 15) {
@@ -11,6 +12,14 @@ struct ContentView: View {
                     Text(button.title)
                 })
             }
+            
+            Divider()
+                .frame(height: 2)
+            
+            TextField(text: $combineViewModel.userName, lable: {
+                Text("유저 이름을 입력하세요")
+            })
+            
         }
         .padding()
     }
@@ -23,7 +32,6 @@ struct ButtonInfo: Identifiable {
 }
 
 final class ButtonInfoList {
-    
     static let serviceManager: ContentsViewModel = .init()
     
     static let buttonList: [ButtonInfo] = [

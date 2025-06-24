@@ -30,6 +30,7 @@ struct PropertiesModel: Codable {
     let yCoordinate: Double
     let xCoordinate: Double
     let storeImageName: String?
+    let photoReference: String?  // 추가
 
     // JSON key랑 Swift property랑 이름이 다를 때 매핑
     private enum CodingKeys: String, CodingKey {
@@ -53,6 +54,7 @@ struct PropertiesModel: Codable {
             yCoordinate = try container.decode(Double.self, forKey: .yCoordinate)
             xCoordinate = try container.decode(Double.self, forKey: .xCoordinate)
             storeImageName = nil // 디코딩할 게 없으니까 기본값 nil로
+            photoReference = nil  // JSON에서 받는 값은 아니므로 nil로 초기화
         }
     
 }

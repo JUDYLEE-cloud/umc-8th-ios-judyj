@@ -6,48 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8B6C526E2DDDE16100820741 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6C526D2DDDE16100820741 /* Moya */; };
-		8BF8833D2E08D86000D2A4C0 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF8833C2E08D86000D2A4C0 /* CombineMoya */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		8B6C524F2DDDE0F900820741 /* 7thWorkBook2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7thWorkBook2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BF883032E08D11D00D2A4C0 /* 8thWorkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 8thWorkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8B6C52512DDDE0F900820741 /* 7thWorkBook2 */ = {
+		8BF883052E08D11D00D2A4C0 /* 8thWorkBook */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = 7thWorkBook2;
+			path = 8thWorkBook;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8B6C524C2DDDE0F900820741 /* Frameworks */ = {
+		8BF883002E08D11D00D2A4C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BF8833D2E08D86000D2A4C0 /* CombineMoya in Frameworks */,
-				8B6C526E2DDDE16100820741 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B6C52462DDDE0F900820741 = {
+		8BF882FA2E08D11D00D2A4C0 = {
 			isa = PBXGroup;
 			children = (
-				8B6C52512DDDE0F900820741 /* 7thWorkBook2 */,
-				8B6C52502DDDE0F900820741 /* Products */,
+				8BF883052E08D11D00D2A4C0 /* 8thWorkBook */,
+				8BF883042E08D11D00D2A4C0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8B6C52502DDDE0F900820741 /* Products */ = {
+		8BF883042E08D11D00D2A4C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B6C524F2DDDE0F900820741 /* 7thWorkBook2.app */,
+				8BF883032E08D11D00D2A4C0 /* 8thWorkBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,69 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B6C524E2DDDE0F900820741 /* 7thWorkBook2 */ = {
+		8BF883022E08D11D00D2A4C0 /* 8thWorkBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B6C525D2DDDE0FA00820741 /* Build configuration list for PBXNativeTarget "7thWorkBook2" */;
+			buildConfigurationList = 8BF883112E08D11E00D2A4C0 /* Build configuration list for PBXNativeTarget "8thWorkBook" */;
 			buildPhases = (
-				8B6C524B2DDDE0F900820741 /* Sources */,
-				8B6C524C2DDDE0F900820741 /* Frameworks */,
-				8B6C524D2DDDE0F900820741 /* Resources */,
+				8BF882FF2E08D11D00D2A4C0 /* Sources */,
+				8BF883002E08D11D00D2A4C0 /* Frameworks */,
+				8BF883012E08D11D00D2A4C0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8B6C52512DDDE0F900820741 /* 7thWorkBook2 */,
+				8BF883052E08D11D00D2A4C0 /* 8thWorkBook */,
 			);
-			name = 7thWorkBook2;
+			name = 8thWorkBook;
 			packageProductDependencies = (
-				8B6C526D2DDDE16100820741 /* Moya */,
-				8BF8833C2E08D86000D2A4C0 /* CombineMoya */,
 			);
-			productName = 7thWorkBook2;
-			productReference = 8B6C524F2DDDE0F900820741 /* 7thWorkBook2.app */;
+			productName = 8thWorkBook;
+			productReference = 8BF883032E08D11D00D2A4C0 /* 8thWorkBook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8B6C52472DDDE0F900820741 /* Project object */ = {
+		8BF882FB2E08D11D00D2A4C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					8B6C524E2DDDE0F900820741 = {
+					8BF883022E08D11D00D2A4C0 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 8B6C524A2DDDE0F900820741 /* Build configuration list for PBXProject "7thWorkBook2" */;
+			buildConfigurationList = 8BF882FE2E08D11D00D2A4C0 /* Build configuration list for PBXProject "8thWorkBook" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 8B6C52462DDDE0F900820741;
+			mainGroup = 8BF882FA2E08D11D00D2A4C0;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				8B6C526C2DDDE16100820741 /* XCRemoteSwiftPackageReference "Moya" */,
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 8B6C52502DDDE0F900820741 /* Products */;
+			productRefGroup = 8BF883042E08D11D00D2A4C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B6C524E2DDDE0F900820741 /* 7thWorkBook2 */,
+				8BF883022E08D11D00D2A4C0 /* 8thWorkBook */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8B6C524D2DDDE0F900820741 /* Resources */ = {
+		8BF883012E08D11D00D2A4C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8B6C524B2DDDE0F900820741 /* Sources */ = {
+		8BF882FF2E08D11D00D2A4C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,10 +125,8 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8B6C525B2DDDE0FA00820741 /* Debug */ = {
+		8BF8830F2E08D11E00D2A4C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 8B6C52512DDDE0F900820741 /* 7thWorkBook2 */;
-			baseConfigurationReferenceRelativePath = Secret/Secret.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -202,10 +188,8 @@
 			};
 			name = Debug;
 		};
-		8B6C525C2DDDE0FA00820741 /* Release */ = {
+		8BF883102E08D11E00D2A4C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 8B6C52512DDDE0F900820741 /* 7thWorkBook2 */;
-			baseConfigurationReferenceRelativePath = Secret/Secret.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -260,18 +244,17 @@
 			};
 			name = Release;
 		};
-		8B6C525E2DDDE0FA00820741 /* Debug */ = {
+		8BF883122E08D11E00D2A4C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"7thWorkBook2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"8thWorkBook/Preview Content\"";
 				DEVELOPMENT_TEAM = 47UM88R722;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "-thWorkBook2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkBook2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -290,18 +273,17 @@
 			};
 			name = Debug;
 		};
-		8B6C525F2DDDE0FA00820741 /* Release */ = {
+		8BF883132E08D11E00D2A4C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"7thWorkBook2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"8thWorkBook/Preview Content\"";
 				DEVELOPMENT_TEAM = 47UM88R722;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "-thWorkBook2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkBook2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.judyj.-thWorkBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,49 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B6C524A2DDDE0F900820741 /* Build configuration list for PBXProject "7thWorkBook2" */ = {
+		8BF882FE2E08D11D00D2A4C0 /* Build configuration list for PBXProject "8thWorkBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B6C525B2DDDE0FA00820741 /* Debug */,
-				8B6C525C2DDDE0FA00820741 /* Release */,
+				8BF8830F2E08D11E00D2A4C0 /* Debug */,
+				8BF883102E08D11E00D2A4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B6C525D2DDDE0FA00820741 /* Build configuration list for PBXNativeTarget "7thWorkBook2" */ = {
+		8BF883112E08D11E00D2A4C0 /* Build configuration list for PBXNativeTarget "8thWorkBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B6C525E2DDDE0FA00820741 /* Debug */,
-				8B6C525F2DDDE0FA00820741 /* Release */,
+				8BF883122E08D11E00D2A4C0 /* Debug */,
+				8BF883132E08D11E00D2A4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8B6C526C2DDDE16100820741 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8B6C526D2DDDE16100820741 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B6C526C2DDDE16100820741 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		8BF8833C2E08D86000D2A4C0 /* CombineMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B6C526C2DDDE16100820741 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = CombineMoya;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 8B6C52472DDDE0F900820741 /* Project object */;
+	rootObject = 8BF882FB2E08D11D00D2A4C0 /* Project object */;
 }

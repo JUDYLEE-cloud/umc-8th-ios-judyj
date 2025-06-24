@@ -24,7 +24,7 @@ struct CustomTabView: View {
                     }
                     .tag(0)
 
-                Text("Second Content")
+                PayView()
                     .tabItem {
                         Label{
                             Text("Pay")
